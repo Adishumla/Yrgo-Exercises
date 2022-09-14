@@ -1,0 +1,69 @@
+/* Color variable defenitions */
+:root {
+  --accent-color: #3f51b5;
+  --background-color: #f3f3f3;
+  --font-color: #313131;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--font-color);
+  font-family: "roboto", sans-serif;
+}
+
+main,
+footer {
+  padding: 36px 24px;
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.quotes .quote {
+  padding: 24px;
+  margin-bottom: 16px;
+  background-color: white;
+  transition: ease-in-out 0.2s;
+}
+
+.quotes .quote:hover {
+  box-shadow: #313131 5px 5px 5px;
+}
+.quotes .quote p:not(.author) {
+  font-size: 24px;
+}
+.quote .author {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+.intro .quote {
+  font-size: 28px;
+  padding: 28px;
+  background-color: #313131;
+  color: white;
+  border-radius: 8px;
+  box-shadow: #313131 5px 8px 5px;
+  transition: transform ease-in-out 0.2s;
+}
+.intro .quote:hover {
+  background-color: #302c2c;
+  transform: translate(-5px, -5px);
+}
+
+a {
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #000;
+}
+footer a:last-child {
+  color: var(--accent-color);
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li:nth-child(odd) {
+  background-color: white;
+}
