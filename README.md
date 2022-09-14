@@ -11,8 +11,8 @@
 ## Table of Contents
 
 <style>
-    h6 ul li {
-        padding-top: -1em;
+    h6 ul{
+        padding-top: -10px;
     }
 </style>
 <h3>
