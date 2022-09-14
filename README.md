@@ -10,6 +10,11 @@
 
 ## Table of Contents
 
+<style>
+    h6 ul li {
+        padding-top: -1em;
+    }
+</style>
 <h3>
 <ul>
 <li><a href="https://github.com/Adishumla/Yrgo-Exercises/tree/main/PHP"> PHP Exercises <a></li>
