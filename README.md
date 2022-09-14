@@ -10,16 +10,11 @@
 
 ## Table of Contents
 
-<style>
-    h6 ul{
-        padding-top: -10px;
-    }
-</style>
 <h3>
 <ul>
 <li><a href="https://github.com/Adishumla/Yrgo-Exercises/tree/main/PHP"> PHP Exercises <a></li>
 <li><a href="https://github.com/Adishumla/Yrgo-Exercises/tree/main/HTML%20and%20CSS">HTML and CSS Exercises</a></li>
-<h6><ul>
+<h6><ul style="padding: -10px">
 <li><a href="https://github.com/Adishumla/Yrgo-Exercises/tree/main/HTML%20and%20CSS/01%20-%20HTML">01 - HTML</a></li>
 <li><a href="https://github.com/Adishumla/Yrgo-Exercises/tree/main/HTML%20and%20CSS/02%20-%20Cascading%20Style%20Sheets">02 - Cascading Style Sheets</a></li>
 </ul></h6>
