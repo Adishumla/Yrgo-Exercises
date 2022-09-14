@@ -4,9 +4,9 @@
 
 ##### This is a collection of exercises I have done so far for the Yrgo course. The exercises are mostly about the basics of programming in HTML, CSS, and PHP so far. The exercises are not meant to be a comprehensive list of all the exercises, but rather a collection of exercises that I have done so far.
 
-##### visit the [Yrgos GitHub](https://github.com/yrgo/wu22) to see the exercises.
+##### Visit the [Yrgos GitHub](https://github.com/yrgo/wu22) to see the exercises.
 
-##### click the links below to see my solutions to the exercises that I have done so far.
+##### Click the links below to see my solutions to the exercises that I have done so far.
 
 ## Table of Contents
 
