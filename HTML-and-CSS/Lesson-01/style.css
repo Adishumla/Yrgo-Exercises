@@ -1,0 +1,89 @@
+@font-face {
+  font-family: "roboto";
+  src: url("Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "roboto-bold";
+  src: url("Roboto/Roboto-Bold.ttf");
+}
+@font-face {
+  font-family: "roboto-italic";
+  src: url("Roboto/Roboto-Italic.ttf");
+}
+@font-face {
+  font-family: "roboto-medium";
+  src: url("Roboto/Roboto-Medium.ttf");
+}
+@font-face {
+  font-family: "roboto-light";
+  src: url("Roboto/Roboto-Light.ttf");
+}
+@font-face {
+  font-family: "roboto-thin-italic";
+  src: url("Roboto/Roboto-ThinItalic.ttf");
+}
+
+body {
+  background: rgb(50, 50, 44);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+}
+p {
+  font-family: "roboto";
+  color: white;
+}
+h1 {
+  font-family: "roboto-bold";
+  box-shadow: inset 0 0 0 0 #54b3d6;
+  color: #54b3d6;
+  margin: 0 -0.25rem;
+  padding: 0 0.25rem;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+h1:hover {
+  box-shadow: inset 150px 0 0 0 #54b3d6;
+  color: white;
+}
+
+h2 {
+  color: white;
+  font-family: "roboto-medium";
+}
+ul li a {
+  text-decoration: none;
+  font-family: "roboto-light";
+  color: white;
+  background: linear-gradient(
+      to right,
+      rgba(100, 200, 200, 1),
+      rgba(100, 200, 200, 1)
+    ),
+    linear-gradient(
+      to right,
+      rgba(255, 0, 0, 1),
+      rgba(255, 0, 180, 1),
+      rgba(0, 100, 200, 1)
+    );
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+}
+ul li a:hover {
+  background-size: 0 3px, 100% 3px;
+}
+
+footer a {
+  text-decoration: none;
+  font-family: "roboto-italic";
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  font-family: "roboto-thin-italic";
+  color: white;
+}
