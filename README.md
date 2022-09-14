@@ -26,3 +26,6 @@
 
 - <a href="https://github.com/Adishumla/Yrgo-Exercises/tree/main/PHP">PHP Exercises</a>
   - <a href="https://github.com/Adishumla/Yrgo-Exercises/tree/main/PHP/Lesson-01"> 01 - Getting Started </a>
+- <a href="https://github.com/Adishumla/Yrgo-Exercises/tree/main/HTML%20and%20CSS">HTML and CSS Exercises</a>
+  - <a href="https://github.com/Adishumla/Yrgo-Exercises/tree/main/HTML%20and%20CSS/01%20-%20HTML">01 - HTML</a>
+  - <a href="https://github.com/Adishumla/Yrgo-Exercises/tree/main/HTML%20and%20CSS/02%20-%20Cascading%20Style%20Sheets">02 - Cascading Style Sheets</a>
