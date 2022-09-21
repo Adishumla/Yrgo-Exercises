@@ -1,4 +1,5 @@
 <?php
+
 use function PHPSTORM_META\type;
 
 for ($i = 1; $i < 6; $i++) {

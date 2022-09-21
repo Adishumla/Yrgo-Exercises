@@ -1,13 +1,14 @@
 <?php
 
-function greet() {
+function greet()
+{
     $name = $_REQUEST['name']; // $_REQUEST is a superglobal variable that contains all the data from the form
     $time = (int) $_REQUEST['time']; // (int) casts the value to an integer
- $greetings = ([
-   [0, 11, "Good morning"], // between 0 and 11 say "Good morning"
-   [12, 17, "Good afternoon"], // between 12 and 17 say "Good afternoon"
-   [18, 24, "Good evening"], // between 18 and 24 say "Good evening"
- ]);
+    $greetings = ([
+        [0, 11, "Good morning"], // between 0 and 11 say "Good morning"
+        [12, 17, "Good afternoon"], // between 12 and 17 say "Good afternoon"
+        [18, 24, "Good evening"], // between 18 and 24 say "Good evening"
+    ]);
     foreach ($greetings as $greeting) { // loop through the greetings array
         if ($time >= $greeting[0] && $time <= $greeting[1]) { // checks if the time is between the first and second value in the array
             echo $greeting[2] . ", $name!"; // echo the third value in the array and the name
@@ -16,7 +17,8 @@ function greet() {
     }
 }
 ?>
-<form action="newGreeter.php" method="post"> <!-- action is the file that the form is sent to, method is the method used to send the form data -->
+<form action="newGreeter.php" method="post">
+    <!-- action is the file that the form is sent to, method is the method used to send the form data -->
     <label for="name">What is your name?</label> <!-- label is the text that is displayed next to the input -->
     <input type="text" name="name" id="name"> <!-- input is the form element, type is the type of input, name is the name of the input, id is the id of the input -->
     <label for="time">What time of day is it?</label>

@@ -1,5 +1,6 @@
-<?php 
-function greet() {
+<?php
+function greet()
+{
     $name = $_REQUEST['name']; // $_REQUEST is a superglobal variable that contains all the data from the form
     $time = (int) $_REQUEST['time']; // (int) casts the value to an integer
     switch ($time) {
