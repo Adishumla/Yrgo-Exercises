@@ -1,0 +1,1 @@
+SELECT artist, COUNT(name) as tracks_count from tracks WHERE duration IS NULL GROUP by artist

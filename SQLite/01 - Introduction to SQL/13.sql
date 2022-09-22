@@ -1,0 +1,1 @@
+SELECT artist FROM tracks GROUP BY artist;

@@ -1,9 +1,8 @@
 <?php
-
 function greet()
 {
-    $name = $_REQUEST['name']; // $_REQUEST is a superglobal variable that contains all the data from the form
-    $time = (int) $_REQUEST['time']; // (int) casts the value to an integer
+    $name = $_POST['name']; // $_REQUEST is a superglobal variable that contains all the data from the form
+    $time = (int) $_POST['time']; // (int) casts the value to an integer
     $greetings = ([
         [0, 11, "Good morning"], // between 0 and 11 say "Good morning"
         [12, 17, "Good afternoon"], // between 12 and 17 say "Good afternoon"
@@ -12,6 +11,10 @@ function greet()
     foreach ($greetings as $greeting) { // loop through the greetings array
         if ($time >= $greeting[0] && $time <= $greeting[1]) { // checks if the time is between the first and second value in the array
             echo $greeting[2] . ", $name!"; // echo the third value in the array and the name
+            break;
+        }
+        if ($time > 24 || $time < 0) { // if the time is greater than 24 or less than 0
+            echo "Invalid time, $name!"; // echo "Invalid time!" and the name
             break;
         }
     }

@@ -1,0 +1,1 @@
+SELECT DISTINCT albums.name, COUNT(tracks.artist) as tracks from tracks INNER JOIN albums ON albums.artist = tracks.artist WHERE albums.artist = 'Michael Kiwanuka';

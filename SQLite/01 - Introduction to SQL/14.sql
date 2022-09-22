@@ -1,0 +1,1 @@
+SELECT COUNT(name), artist FROM tracks GROUP BY artist

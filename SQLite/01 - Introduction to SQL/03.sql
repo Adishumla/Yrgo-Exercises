@@ -1,0 +1,1 @@
+SELECT name, artist from tracks
