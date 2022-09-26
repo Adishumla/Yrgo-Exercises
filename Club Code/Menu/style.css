@@ -1,0 +1,29 @@
+.numberpad__button {
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #000000;
+  padding: 0.5em;
+  margin: 0.5em;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.numberpad__button:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+.numberpad__button:active {
+  background-color: grey;
+  color: #ffffff;
+  border: 1px solid #000000;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+.numberpad {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
