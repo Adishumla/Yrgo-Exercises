@@ -1,28 +1,37 @@
 <?php
-$cards = ['ace of diamond', 'ace of heart', 'ace of spade', 'ace of club', 'two of diamond', 'two of heart', 'two of spade', 'two of club', 'three of diamond', 'three of heart', 'three of spade', 'three of club', 'four of diamond', 'four of heart', 'four of spade', 'four of club', 'five of diamond', 'five of heart', 'five of spade', 'five of club', 'six of diamond', 'six of heart', 'six of spade', 'six of club', 'seven of diamond', 'seven of heart', 'seven of spade', 'seven of club', 'eight of diamond', 'eight of heart', 'eight of spade', 'eight of club', 'nine of diamond', 'nine of heart', 'nine of spade', 'nine of club', 'ten of diamond', 'ten of heart', 'ten of spade', 'ten of club', 'jack of diamond', 'jack of heart', 'jack of spade', 'jack of club', 'queen of diamond', 'queen of heart', 'queen of spade', 'queen of club', 'king of diamond', 'king of heart', 'king of spade', 'king of club'];
-// function that shuffles the deck of cards
+$cards = [
+    'suit' => ['hearts', 'diamonds', 'clubs', 'spades'],
+    'value' => ['ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'jack', 'queen', 'king']
+];
+// shuffle the deck of cards function
 function shuffleDeck($cards)
 {
-    shuffle($cards);
-    return $cards;
+    $deck = [];
+    foreach ($cards['suit'] as $suit) {
+        foreach ($cards['value'] as $value) {
+            $deck[] = ['suit' => $suit, 'value' => $value];
+        }
+    }
+    shuffle($deck);
+    return $deck;
 }
-// function that deals a poker hand of five cards
-function dealHand($cards)
+// deal a hand of five cards function
+function dealHand($deck)
 {
     $hand = [];
     for ($i = 0; $i < 5; $i++) {
-        $hand[] = $cards[$i];
+        $hand[] = array_pop($deck);
     }
     return $hand;
 }
-// function that displays a poker hand
+// display a hand of five cards as text function
 function displayHand($hand)
 {
     foreach ($hand as $card) {
-        echo "<p>$card</p>";
+        echo "{$card['value']} of {$card['suit']}<br>";
     }
 }
-// run the functions
-$cards = shuffleDeck($cards);
-$hand = dealHand($cards);
+//run the functions
+$deck = shuffleDeck($cards);
+$hand = dealHand($deck);
 echo displayHand($hand);
