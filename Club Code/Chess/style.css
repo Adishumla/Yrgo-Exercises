@@ -5,7 +5,9 @@ table {
   width: 100%;
   height: 100%;
 }
-td {
+td,
+tr,
+th {
   width: 50px;
   height: 50px;
   border: 1px solid black;
@@ -13,4 +15,10 @@ td {
   font-size: 50px;
   font-weight: bold;
   cursor: pointer;
+}
+tr,
+th {
+  font-size: 40px;
+  border: 0px solid black;
+  font-weight: normal;
 }
