@@ -3,35 +3,23 @@ $cards = [
     'suit' => ['hearts', 'diamonds', 'clubs', 'spades'],
     'value' => ['ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'jack', 'queen', 'king']
 ];
-// shuffle the deck of cards function
-function shuffleDeck($cards)
+// function sort the cards randomly 
+function shuffleCards($cards)
 {
-    $deck = [];
-    foreach ($cards['suit'] as $suit) {
-        foreach ($cards['value'] as $value) {
-            $deck[] = ['suit' => $suit, 'value' => $value];
-        }
-    }
-    shuffle($deck);
-    return $deck;
+    $randomSuit = $cards['suit'][array_rand($cards['suit'])];
+    $randomValue = $cards['value'][array_rand($cards['value'])];
+    return $randomSuit . ' ' . $randomValue;
 }
-// deal a hand of five cards function
-function dealHand($deck)
+
+// function deal 5 cards
+function dealCards($cards)
 {
     $hand = [];
     for ($i = 0; $i < 5; $i++) {
-        $hand[] = array_pop($deck);
+        $hand[] = shuffleCards($cards);
     }
     return $hand;
 }
-// display a hand of five cards as text function
-function displayHand($hand)
-{
-    foreach ($hand as $card) {
-        echo "{$card['value']} of {$card['suit']}<br>";
-    }
-}
-//run the functions
-$deck = shuffleDeck($cards);
-$hand = dealHand($deck);
-echo displayHand($hand);
+
+echo 'Your hand is: ' . implode(', ', dealCards($cards));
+// function deal 5 cards dynamically
