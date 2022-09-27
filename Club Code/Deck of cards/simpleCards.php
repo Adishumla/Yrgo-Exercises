@@ -1,4 +1,6 @@
 <?php
+// every hand should have 5 cards
+
 $cards = [
     'suit' => ['hearts', 'diamonds', 'clubs', 'spades'],
     'value' => ['ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'jack', 'queen', 'king']
@@ -12,10 +14,11 @@ function shuffleCards($cards)
 }
 
 // function deal 5 cards
+// if hand has 5 cards, stop dealing
 function dealCards($cards)
 {
     $hand = [];
-    for ($i = 0; $i < 5; $i++) {
+    while (count($hand) < 5) {
         $hand[] = shuffleCards($cards);
     }
     return $hand;
