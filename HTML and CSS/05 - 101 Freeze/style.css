@@ -110,6 +110,14 @@ h1 {
     width: 100%;
   }
 }
+@media screen and (max-width: 480px) {
+  .left-section {
+    width: 100%;
+  }
+  .right-section {
+    width: 100%;
+  }
+}
 .right-section {
   display: flex;
   flex-direction: column;
