@@ -1,0 +1,29 @@
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+a {
+  height: 100px;
+  width: 100px;
+  background-color: violet;
+  margin: 10px;
+  font-size: 60px;
+  color: black;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  color: black;
+  margin: 10px;
+  font-size: 40px;
+}

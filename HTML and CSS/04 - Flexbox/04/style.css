@@ -1,0 +1,72 @@
+.purple {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #995bed;
+  width: 100vh;
+  height: 100vh;
+}
+
+.card {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 75%;
+  background-color: white;
+  border-radius: 10px;
+}
+.top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+}
+.logo {
+  width: 100%;
+  font-size: 20px;
+  color: rgb(177, 181, 183);
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+.columns {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+  margin-top: 80px;
+}
+.column {
+  width: 100%;
+  height: 34px;
+  background-color: #e3e3e3;
+  border-radius: 5px;
+}
+.user {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 900px;
+}
+.cirkle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: #e3e3e3;
+}
+.name {
+  margin-top: 20px;
+  width: 150px;
+  height: 30px;
+  background-color: #e3e3e3;
+  border-radius: 5px;
+}

@@ -1,0 +1,11 @@
+div {
+  height: 200px;
+  width: 200px;
+  background-color: green;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
