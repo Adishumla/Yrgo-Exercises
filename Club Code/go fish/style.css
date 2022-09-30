@@ -1,0 +1,17 @@
+input {
+  border: 1px solid #000;
+  height: 100px;
+  width: 100px;
+}
+form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 40px;
+  justify-content: center;
+  gap: 20px;
+}
+h1,
+.fish {
+  text-align: center;
+}

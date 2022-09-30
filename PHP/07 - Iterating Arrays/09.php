@@ -26,9 +26,9 @@ $characters = [
 ?>
 <?php foreach ($characters as $character) : ?>
     <h2><?= $character['name'] ?></h2>
-    <ol>
+    <l>
         <?php foreach ($character['quotes'] as $quote) : ?>
             <li><?= $quote ?></li>
         <?php endforeach; ?>
-    </ol>
+    </l>
 <?php endforeach; ?>

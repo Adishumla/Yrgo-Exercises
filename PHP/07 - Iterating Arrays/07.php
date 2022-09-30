@@ -11,7 +11,5 @@ $quotes = [
     for ($i = 0; $i < count($quotes); $i++) echo <<<ITEM
     <li>$quotes[$i]</li>
 ITEM;
-
-
     ?>
 </ol>
