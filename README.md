@@ -8,6 +8,8 @@ Visit the [Yrgos GitHub](https://github.com/yrgo/wu22) to see the exercises.
 
 Click the links below to see my solutions to the exercises that I have done so far.
 
+![Writing](GIF/writing.gif)
+
 ## Table of Contents
 
 - <a href="https://github.com/Adishumla/Yrgo-Exercises/tree/main/PHP">PHP Exercises</a>
