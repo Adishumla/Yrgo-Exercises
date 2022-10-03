@@ -8,7 +8,7 @@ Visit the [Yrgos GitHub](https://github.com/yrgo/wu22) to see the exercises.
 
 Click the links below to see my solutions to the exercises that I have done so far.
 
-![Writing](GIF/writing.gif)
+![Writing](https://github.com/Adishumla/Yrgo-Exercises/blob/main/GIF/readmegif.gif)
 
 ## Table of Contents
 
