@@ -27,33 +27,42 @@ $fish = [
 
 // randomly choose a bait from the array dynamically
 $random_bait = $fish[array_rand($fish)]['bait'];
-
-
+// randomly choose a depth from the array dynamically
+$random_depth = $fish[array_rand($fish)]['depth'];
 
 ?>
 
+<h1>Go Fish</h1>
+<h3>Your bait is <?= $random_bait ?></h3>
+<h3>Your depth is <?= $random_depth ?></h3>
 <!-- form that with input for all fish -->
 <form action="fish.php" method="post">
     <?php foreach ($fish as $fish) : ?>
         <div class="fish">
             <input type="submit" name="fish" value="<?= $fish['name']; ?>">
-            <?php
-            // if the fish bait is the same as the randomly chosen bait reveal the fish otherwise hide it
-            if ($fish['bait'] == $random_bait) {
-                echo '<img src="images/' . $fish['name'] . '.jpg" alt="' . $fish['name'] . '">';
-            } else {
-                echo 'Sorry!';
-            }
-
-
-
-
-            ?>
-            <?php
-            ?>
         </div>
     <?php endforeach; ?>
 </form>
 <?php
-// get fish from form and display it
-?>
+if (isset($_POST['fish'])) {
+    if ($fish['bait'] == $random_bait && $fish['depth'] == $random_depth) {
+        // display the fish name
+        echo "<h2>You caught a " . $_POST['fish'] . "</h2>";
+        // break out of the loop
+    }
+    if ($fish['bait'] != $random_bait && $fish['depth'] != $random_depth) {
+        // display the fish name
+        echo "<h2> You did not have the right bait and it was the wrong depth</h2>";
+        // break out of the loop
+    }
+    if ($fish['bait'] != $random_bait && $fish['depth'] == $random_depth) {
+        // display the fish name
+        echo "<h2> You did not have the right bait</h2>";
+        // break out of the loop
+    }
+    if ($fish['bait'] == $random_bait && $fish['depth'] != $random_depth) {
+        // display the fish name
+        echo "<h2> It was the wrong depth</h2>";
+        // break out of the loop
+    }
+}
