@@ -35,3 +35,15 @@ Click the links below to see my solutions to the exercises that I have done so f
   - <a href="https://github.com/Adishumla/Yrgo-Exercises/tree/main/HTML%20and%20CSS/07%20-%20Media%20Queries">07 - Media Queries</a>
 - <a href="https://github.com/Adishumla/Yrgo-Exercises/tree/main/SQLite">SQLite Exercises</a>
   - <a href="https://github.com/Adishumla/Yrgo-Exercises/tree/main/SQLite/01%20-%20Introduction%20to%20SQL">01 - Introduction to SQL</a>
+  - <a href="https://github.com/Adishumla/Yrgo-Exercises/tree/main/SQLite/02%20-%20Filtering%20%26%20Sorting">02 - Filtering & Sorting</a>
+- <a href="https://github.com/Adishumla/Yrgo-Exercises/tree/main/Club%20Code">Club Code</a>
+  - <a href="https://github.com/Adishumla/Yrgo-Exercises/tree/main/Club%20Code/Calendar">Calendar</a>
+  - <a href="https://github.com/Adishumla/Yrgo-Exercises/tree/main/Club%20Code/Chess">Chess</a>
+  - <a href="https://github.com/Adishumla/Yrgo-Exercises/tree/main/Club%20Code/Deck%20of%20cards">Deck of cards</a>
+  - <a href="https://github.com/Adishumla/Yrgo-Exercises/tree/main/Club%20Code/Food%20cart">Food cart</a>
+  - <a href="https://github.com/Adishumla/Yrgo-Exercises/tree/main/Club%20Code/Lotto">Lotto</a>
+  - <a href="https://github.com/Adishumla/Yrgo-Exercises/tree/main/Club%20Code/Menu">Menu</a>
+  - <a href="https://github.com/Adishumla/Yrgo-Exercises/tree/main/Club%20Code/Santa's%20little%20helper">Santa's little helper</a>
+  - <a href="https://github.com/Adishumla/Yrgo-Exercises/tree/main/Club%20Code/Sweet%20form">Sweet form</a>
+  - <a href="https://github.com/Adishumla/Yrgo-Exercises/tree/main/Club%20Code/Three%20dice">Three dice</a>
+  - <a href="https://github.com/Adishumla/Yrgo-Exercises/tree/main/Club%20Code/go%20fish">go fish</a>
