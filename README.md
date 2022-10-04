@@ -17,7 +17,10 @@ Click the links below to see my solutions to the exercises that I have done so f
   - <a href="https://github.com/Adishumla/Yrgo-Exercises/tree/main/PHP/02%20-%20Variables%20%26%20Assignment"> 02 - Variables & Assignment </a>
   - <a href="https://github.com/Adishumla/Yrgo-Exercises/tree/main/PHP/03%20-%20Breaking%20Up%20Files"> 03 - Breaking Up Files </a>
   - <a href="https://github.com/Adishumla/Yrgo-Exercises/tree/main/PHP/04%20-%20Logic%20%26%20Presentation"> 04 - Logic & Presentation </a>
-  - <a href="https://github.com/Adishumla/Yrgo-Exercises/tree/main/PHP/05%20-%20Understanding%20Arrays"></a> 05 - Understanding Arrays </a>
+  - <a href="https://github.com/Adishumla/Yrgo-Exercises/tree/main/PHP/05%20-%20Understanding%20Arrays"> 05 - Understanding Arrays </a>
+  - <a href="https://github.com/Adishumla/Yrgo-Exercises/tree/main/PHP/06%20-%20Freeze%20101"> 06 - Freeze 101 </a>
+  - <a href="https://github.com/Adishumla/Yrgo-Exercises/tree/main/PHP/07%20-%20Iterating%20Arrays"> 07 - Iterating Arrays </a>
+  - <a href="https://github.com/Adishumla/Yrgo-Exercises/tree/main/PHP/08%20-%20Infinite%20Loops"> 08 - Infinite Loops </a>
   - <a href="https://github.com/Adishumla/Yrgo-Exercises/tree/main/PHP/Extra-Exercises"> Extra Exercises </a>
     - <a href="https://github.com/Adishumla/Yrgo-Exercises/tree/main/PHP/Extra-Exercises/PHP-Dice"> PHP Dice </a>
     - <a href="https://github.com/Adishumla/Yrgo-Exercises/tree/main/PHP/Extra-Exercises/PHP-Greeter "> PHP Greeter </a>
