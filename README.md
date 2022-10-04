@@ -1,7 +1,3 @@
-<!--link css-->
-
-[]: # (
-
 # Yrgo-Exercises
 
 ## Introduction
