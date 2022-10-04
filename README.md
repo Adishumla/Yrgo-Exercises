@@ -27,7 +27,7 @@ Click the links below to see my solutions to the exercises that I have done so f
 - <a href="https://github.com/Adishumla/Yrgo-Exercises/tree/main/HTML%20and%20CSS">HTML and CSS Exercises</a>
   - <a href="https://github.com/Adishumla/Yrgo-Exercises/tree/main/HTML%20and%20CSS/01%20-%20HTML">01 - HTML</a>
   - <a href="https://github.com/Adishumla/Yrgo-Exercises/tree/main/HTML%20and%20CSS/02%20-%20Cascading%20Style%20Sheets">02 - Cascading Style Sheets</a>
-  - <a href="https://github.com/Adishumla/Yrgo-Exercises/tree/main/HTML%20and%20CSS/03%20-%20Developer%20tools"></a>03 - Developer tools</a>
+  - <a href="https://github.com/Adishumla/Yrgo-Exercises/tree/main/HTML%20and%20CSS/03%20-%20Developer%20tools">03 - Developer tools</a>
   - <a href="https://github.com/Adishumla/Yrgo-Exercises/tree/main/HTML%20and%20CSS/04%20-%20Flexbox">04 - Flexbox</a>
   - <a href="https://github.com/Adishumla/Yrgo-Exercises/tree/main/HTML%20and%20CSS/05%20-%20101%20Freeze">05 - 101 Freeze</a>
   - <a href="https://github.com/Adishumla/Yrgo-Exercises/tree/main/HTML%20and%20CSS/03%20-%20Developer%20tools">03 - Developer tools</a>
