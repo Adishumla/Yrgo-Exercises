@@ -1,0 +1,129 @@
+article {
+  height: 800px;
+  width: 800px;
+  display: grid;
+  grid-template-columns: 150px 500px 150px;
+  grid-template-rows: 150px 500px 150px;
+  background-color: #fff;
+}
+.left-container {
+  display: grid;
+  grid-template-rows: repeat(9, 1fr);
+  grid-row: 2;
+}
+.left-box-1,
+.left-box-2,
+.left-box-3,
+.left-box-4,
+.left-box-5,
+.left-box-6,
+.left-box-7,
+.left-box-8,
+.left-box-9 {
+  background-color: blue;
+  border: 2px solid #000;
+}
+.right-container {
+  display: grid;
+  grid-template-rows: repeat(9, 1fr);
+  grid-row: 2;
+  grid-column: 3;
+}
+.right-box-1,
+.right-box-2,
+.right-box-3,
+.right-box-4,
+.right-box-5,
+.right-box-6,
+.right-box-7,
+.right-box-8,
+.right-box-9 {
+  background-color: red;
+  border: 2px solid #000;
+}
+.top-container {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-column: 2;
+}
+.top-box-1,
+.top-box-2,
+.top-box-3,
+.top-box-4,
+.top-box-5,
+.top-box-6,
+.top-box-7,
+.top-box-8,
+.top-box-9 {
+  background-color: green;
+  border: 2px solid #000;
+}
+.bottom-container {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-column: 2;
+  grid-row: 3;
+}
+.bottom-box-1,
+.bottom-box-2,
+.bottom-box-3,
+.bottom-box-4,
+.bottom-box-5,
+.bottom-box-6,
+.bottom-box-7,
+.bottom-box-8,
+.bottom-box-9 {
+  background-color: yellow;
+  border: 2px solid #000;
+}
+.left-top-corner {
+  grid-row: 1;
+  grid-column: 1;
+  background-color: pink;
+}
+.left-bottom-corner {
+  grid-row: 3;
+  grid-column: 1;
+  background-color: pink;
+}
+.right-top-corner {
+  grid-row: 1;
+  grid-column: 3;
+  background-color: pink;
+}
+.right-bottom-corner {
+  grid-row: 3;
+  grid-column: 3;
+  background-color: pink;
+}
+.center {
+  grid-row: 2;
+  grid-column: 2;
+  background-color: purple;
+  display: grid;
+  grid-template-row: 50px 100px 50px;
+}
+.center-box-1,
+.center-box-3 {
+  background-color: orange;
+  border: 2px solid #000;
+  width: 60px;
+  height: 90px;
+  transform: rotate(45deg);
+}
+.center-box-2 {
+  background-color: orange;
+  border: 2px solid #000;
+  width: 60px;
+  height: 290px;
+  transform: rotate(45deg);
+  margin-left: 200px;
+}
+.center-box-1 {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.center-box-3 {
+  margin-left: 400px;
+  margin-bottom: 60px;
+}

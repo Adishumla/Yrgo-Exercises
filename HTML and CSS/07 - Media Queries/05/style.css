@@ -1,0 +1,15 @@
+:root {
+  --primary-bg-color: #fff;
+  --primary-text-color: #000;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
+}
+@media screen and (prefers-color-scheme: dark) {
+  :root {
+    filter: invert(1);
+  }
+}
