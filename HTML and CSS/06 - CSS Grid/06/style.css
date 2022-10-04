@@ -101,7 +101,6 @@ article {
   grid-column: 2;
   background-color: purple;
   display: grid;
-  grid-template-row: 50px 100px 50px;
 }
 .center-box-1,
 .center-box-3 {
@@ -115,15 +114,17 @@ article {
   background-color: orange;
   border: 2px solid #000;
   width: 60px;
-  height: 290px;
+  height: 260px;
   transform: rotate(45deg);
-  margin-left: 200px;
+  justify-self: center;
 }
 .center-box-1 {
-  margin-left: 20px;
-  margin-top: 20px;
+  margin-left: 25px;
+  margin-top: 10px;
 }
 .center-box-3 {
-  margin-left: 400px;
-  margin-bottom: 60px;
+  justify-self: end;
+  align-self: center;
+  margin-right: 25px;
+  margin-bottom: 10px;
 }
