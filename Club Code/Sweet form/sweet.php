@@ -1,4 +1,5 @@
 <?php
+session_start();
 // array with candy and price
 $candy = [
     ['name' => 'Snickers', 'price' => 1.00],
@@ -26,7 +27,6 @@ $candy = [
     ['name' => 'Gummy Oyster', 'price' => 1.25],
     ['name' => 'Gummy Mussels', 'price' => 1.50],
     ['name' => 'Gummy Snails', 'price' => 1.00],
-    ['name' => 'Gummy Snails', 'price' => 1.50]
 ];
 $money = 10.00;
 // function to display the candy table with the candy name and price
@@ -51,22 +51,28 @@ function displayCandy($candy, $money)
     echo "<table border=1 width=294>";
     echo "<tr><th colspan=3> Cart </th></tr>";
     echo "<tr><td width=42>Name</td><td width=42>Price</td><td width=42>Remove</td></tr>";
-    // save the candy in an array
+    // if Buy is pressed add to cart and update money and cart in session and display cart
+    //test 
     if (isset($_POST['submit'])) {
-        $candyInCart = $_POST['candy'];
-        $candyInCart = $candy[$candyInCart];
-        // save the candy in an array 
-        $candyInCart = $_POST['candy'];
-        $candyInCart = $candy[$candyInCart];
-        // update the money variable
-        $money = $money - $candyInCart['price'];
-        // display the candy in cart
-        echo "<tr>";
-        echo "<td>" . $candyInCart['name'] . "</td>";
-        echo "<td>" . $candyInCart['price'] . "</td>";
-        echo "<td><form action='sweet.php' method='post'><input type='hidden' name='candy' value='$i' /><input type='submit' name='submit' value='Remove' /></form></td>";
-        echo "</tr>";
+        $candyIndex = $_POST['candy'];
+        $money = $money - $candy[$candyIndex]['price'];
+        $_SESSION['money'] = $money;
+        $_SESSION['cart'][] = $candy[$candyIndex];
+        $cart = $_SESSION['cart'];
+        for ($i = 0; $i < count($cart); $i++) {
+            echo "<tr>";
+            echo "<td>" . $cart[$i]['name'] . "</td>";
+            echo "<td>" . $cart[$i]['price'] . "</td>";
+            echo "<td><form action='sweet.php' method='post'><input type='hidden' name='cart' value='$i' /><input type='submit' name='remove' value='Remove' /></form></td>";
+            echo "</tr>";
+        }
+        for ($i = 0; $i < count($cart); $i++) {
+            $money -= $cart[$i]['price'];
+        }
     }
+
+    // if remove button is pressed remove that 1 candy from cart and update money in session
+
 
     echo "</table>";
     echo "<br>";
@@ -75,3 +81,13 @@ function displayCandy($candy, $money)
     echo "Money: $money";
 }
 displayCandy($candy, $money);
+// destroy the session function with a button
+function destroySession()
+{
+    echo "<form action='sweet.php' method='post'><input type='submit' name='submit' value='Destroy Session' /></form>";
+    if (isset($_POST['submit']) && $_POST['submit'] == 'Destroy Session') {
+        session_destroy();
+        header("Location: sweet.php");
+    }
+}
+destroySession();
