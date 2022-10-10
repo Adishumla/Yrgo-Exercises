@@ -1,5 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=Bebasneue");
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Bebasneue", sans-serif;
 }
 .text-pop-up-top {
   -webkit-animation: text-pop-up-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
@@ -54,18 +55,19 @@ body {
       0 8px 0 #911d14, 0 9px 0 #911d14, 0 50px 30px rgba(0, 0, 0, 0.3);
   }
 }
+@import url("https://fonts.googleapis.com/css?family=Bebasneue");
 .text-pop-up-top {
   //center text on page
   position: absolute;
   transform: translate(-50%, -50%);
   margin-top: 25%;
   //text styling
-  font-family: "Roboto", sans-serif;
+  font-family: "Bebasneue", sans-serif;
   font-size: 5.5rem;
-  font-weight: 700;
   color: red;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   line-height: 1.2;
+  //style-concaveb
 }
