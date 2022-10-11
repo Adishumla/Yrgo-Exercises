@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img
+      srcset="
+        ../images/car_2000w.jpeg 2000w,
+        ../images/car_1000w.jpeg 1000w,
+        ../images/car_700w.jpeg   700w,
+        ../images/car_400w.jpeg   400w
+      "
+      sizes="(max-width: 400px) 400px,
+             (max-width: 700px) 700px,
+             (max-width: 1000px) 1000px,
+             (max-width: 2000px) 2000px"
+      alt="Car"
+    />
+  </body>
+</html>

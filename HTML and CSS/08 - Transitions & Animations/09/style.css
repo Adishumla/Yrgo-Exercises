@@ -1,0 +1,32 @@
+.cirkle {
+  background-color: #000;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+  animation: move 2s infinite;
+  animation-direction: alternate;
+}
+@keyframes move {
+  0% {
+    transform: translateX(0px);
+    background-color: #000;
+  }
+  50% {
+    transform: translateX(100px);
+    background-color: green;
+  }
+  75% {
+    transform: translateX(140px);
+    background-color: #000;
+  }
+  100% {
+    transform: translateX(200px);
+    background-color: red;
+  }
+}

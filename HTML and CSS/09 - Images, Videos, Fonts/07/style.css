@@ -1,0 +1,12 @@
+.bold {
+  font-family: "Silkscreen";
+  font-weight: bold;
+}
+
+.normal {
+  font-family: "Silkscreen";
+  font-weight: normal;
+}
+h1 {
+  font-size: 5em;
+}

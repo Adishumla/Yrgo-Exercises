@@ -1,0 +1,10 @@
+svg path {
+  fill: orange;
+  transition: fill 0.5s;
+}
+svg {
+  width: 200px;
+}
+svg:hover path {
+  fill: red;
+}

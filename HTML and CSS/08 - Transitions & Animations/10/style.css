@@ -1,0 +1,56 @@
+.block {
+  background-color: red;
+  padding: 10px;
+  margin: 0px;
+  animation: slide 1s ease 0s, fade 1s ease 1s forwards;
+  //animation-delay: 0.5s;
+  height: 100px;
+  width: 200px;
+}
+.block:nth-of-type(2) {
+  background-color: blue;
+  animation: slide 1.5s ease 0s, fade 1.5s ease 1.5s forwards;
+}
+
+.text {
+  position: absolute;
+  animation: reveal 0.2 4.5s;
+}
+.text:nth-child(2) {
+  top: 100px;
+}
+
+@keyframes slide {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+
+  100% {
+    transform: scaleX(100%);
+    transform-origin: left;
+  }
+}
+
+@keyframes fade {
+  0% {
+    transform: scaleX(100%);
+    transform-origin: right;
+  }
+  100% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
