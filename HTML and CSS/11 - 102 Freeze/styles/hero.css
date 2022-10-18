@@ -1,0 +1,9 @@
+.hero {
+  margin-bottom: 3rem;
+  padding-top: calc(1.5rem + 70px);
+}
+
+.hero h1 {
+  font-size: var(--h1-large);
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,33 @@
+:root {
+  /* Font sizes */
+  --h1-large: 2.25rem;
+  --h1: 1.5rem;
+  --p: 1rem;
+  --p-small: 0.75rem;
+
+  /* Colors */
+  --color-almost-black: #222020;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-gray: #cacaca;
+  --color-accent: #e9aa89;
+
+  /* Font family */
+  --font-family-base: Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-almost-black);
+  font-family: var(--font-family-base);
+  color: var(--color-white);
+  margin: 0;
+}
+
+section {
+  margin: 0 auto;
+  padding: 1.5rem;
+}

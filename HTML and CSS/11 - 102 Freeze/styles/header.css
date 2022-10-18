@@ -1,0 +1,31 @@
+header {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  height: 50px;
+  z-index: 10;
+}
+
+.hamburger {
+  width: 50px;
+  height: 50px;
+  background: none;
+  border: 0;
+  position: absolute;
+  right: 0;
+  z-index: 4;
+  pointer-events: none;
+}
+
+header input {
+  opacity: 0;
+  z-index: 0;
+  visibility: hidden;
+  position: absolute;
+}
+
+header label {
+  width: 50px;
+  height: 50px;
+  display: block;
+}
