@@ -8,12 +8,14 @@
     <title>Document</title>
   </head>
   <body>
-    <form action="javascript:void(0);">
-      <input class="name" type="text" />
-      <input class="duration" type="number" />
-      <input class="submit" type="submit" />
+    <!--form to write task name and task duration-->
+    <form class="form" action="javascript:void(0);">
+      <input type="text" placeholder="Task Name" class="input name" />
+      <input type="number" placeholder="Task Duration" class="input duration" />
+      <button class="btn">Add Task</button>
     </form>
-    <ul></ul>
+    <!--list of tasks-->
+    <ul class="tasks"></ul>
     <script src="script.js"></script>
   </body>
 </html>
