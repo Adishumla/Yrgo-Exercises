@@ -1,0 +1,47 @@
+body {
+  height: 100vh;
+}
+
+div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+img {
+  height: 50%;
+  object-fit: cover;
+  filter: grayscale(1);
+  transition: filter 0.5s;
+}
+
+img:hover {
+  filter: grayscale(0);
+}
+
+photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.con {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+video {
+  filter: grayscale(1);
+  transition: filter 0.5s;
+}
+video:hover {
+  filter: grayscale(0);
+}
+
+@media (max-width: 768px) {
+  div {
+    flex-direction: column;
+  }
+}
