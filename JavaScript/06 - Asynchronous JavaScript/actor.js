@@ -1,0 +1,1 @@
+const actor = '{"name":"Lindsay Lohan","character":"Cady Heron","profile_url":"https://www.themoviedb.org/person/49265-lindsay-lohan","image_url":"https://image.tmdb.org/t/p/w1280/eOlnmUvqLjguEz84Btx0xBbv5tQ.jpg"}';

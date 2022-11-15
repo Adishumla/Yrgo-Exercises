@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      font-family: "Roboto", sans-serif;
+      height: 100vh;
+      background-color: dimgray;
+      color: white;
+    }
+    a {
+      color: white;
+      text-decoration: none;
+    }
+    section {
+      padding-top: 40px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+    }
+    img {
+      width: 200px;
+      height: 200px;
+      border-radius: 100%;
+      object-fit: cover;
+      border: 2px solid white;
+      transition: all 0.3s ease-in-out;
+    }
+    img:hover {
+      border: 2px solid red;
+    }
+
+    h2 {
+      padding-top: 10px;
+      margin: 0;
+      text-align: center;
+    }
+    p {
+      margin: 0;
+      text-align: center;
+    }
+  </style>
+  <body>
+    <section></section>
+    <script>
+      const section = document.querySelector("section");
+      const url = `https://yrgo.github.io/api/movies/mean-girls.json`;
+      const fetchMovie = async () => {
+        const response = await fetch(url);
+        const {
+          title,
+          year,
+          trailer_url,
+          poster_url,
+          actors,
+          image_url,
+          profile_url,
+        } = await response.json();
+        section.innerHTML = `
+        ${actors.map((actor) => {
+          return `<div>
+            <a href="${actor.profile_url}"> 
+              <img src="${actor.image_url}" alt="${actor.name}" />
+            <h2>${actor.name}</h2>
+            <p>${actor.character}</p></div>`;
+        })}`;
+      };
+      fetchMovie();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div></div>
+    <script>
+      const div = document.querySelector("div");
+      const actor =
+        '{"name":"Lindsay Lohan","character":"Cady Heron","profile_url":"https://www.themoviedb.org/person/49265-lindsay-lohan","image_url":"https://image.tmdb.org/t/p/w1280/eOlnmUvqLjguEz84Btx0xBbv5tQ.jpg"}';
+      const actorObj = JSON.parse(actor);
+      console.log(actorObj);
+      div.innerHTML = `
+        <h1>${actorObj.name}</h1>
+        <img src="${actorObj.image_url}" alt="${actorObj.name}" />
+      `;
+      const url = `https://yrgo.github.io/api/movies/mean-girls.json`;
+
+      const fetchMovie = async () => {
+        const response = await fetch(url);
+        const { title, year, trailer_url, poster_url, actors } =
+          await response.json();
+        div.innerHTML = `
+          <p>The movie ${title} was released ${year}.</p>
+          <img src="${poster_url}" alt="${title}" />
+          <p>Watch the trailer here: <a href="${trailer_url}">${trailer_url}</a></p>
+          <p>Actors: <ul>${actors.map((actor) => {
+            return `<li>${actor.character} is played by ${actor.name}</li>`;
+          })}</ul></p>
+        `;
+      };
+      fetchMovie();
+    </script>
+  </body>
+</html>
