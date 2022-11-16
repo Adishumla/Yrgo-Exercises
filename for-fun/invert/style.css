@@ -61,4 +61,8 @@ video:hover {
   video {
     width: 60%;
   }
+  video:active {
+    transform: scale(1.1);
+    transform: translate(-10px, -10px) scale(1.1);
+  }
 }

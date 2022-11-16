@@ -9,3 +9,8 @@ video.addEventListener("mouseleave", () => {
 video.addEventListener("mouseover", () => {
   video.play();
 });
+
+//play video when touching
+video.addEventListener("touchstart", () => {
+  video.play();
+});
