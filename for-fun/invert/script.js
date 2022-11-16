@@ -9,3 +9,15 @@ video.addEventListener("mouseleave", () => {
 video.addEventListener("mouseover", () => {
   video.play();
 });
+
+// on moblie devices, play video when user stops scrolling for 2 second
+let timer;
+window.addEventListener("scroll", () => {
+  clearTimeout(timer);
+  if (!video.paused) {
+    video.pause();
+  }
+  timer = setTimeout(() => {
+    video.play();
+  }, 2000);
+});
