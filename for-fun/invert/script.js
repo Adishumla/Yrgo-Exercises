@@ -17,7 +17,7 @@ const options = {
   threshold: 1,
 };
 
-const observer = new IntersectionObserver((entries, observer) => {
+/* const observer = new IntersectionObserver((entries, observer) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       setTimeout(() => {
@@ -42,4 +42,21 @@ const observer2 = new IntersectionObserver((entries, observer) => {
       video.pause();
     }
   });
-}, options2);
+}, options2); */
+
+// play vdeo when in view after 1 second and pause when out of view, only on mobile devices
+const observer = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          video.play();
+        }, 1000);
+      } else {
+        video.pause();
+      }
+    });
+  } /* , options */
+);
+
+observer.observe(video);
