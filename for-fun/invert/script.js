@@ -11,6 +11,6 @@ video.addEventListener("mouseover", () => {
 });
 
 //play video when clicking
-video.addEventListener("click", () => {
+video.addEventListener("touch", () => {
   video.play();
 });
