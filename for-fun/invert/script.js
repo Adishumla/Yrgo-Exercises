@@ -10,7 +10,7 @@ video.addEventListener("mouseover", () => {
   video.play();
 });
 
-//play video when touching
-video.addEventListener("touchstart", () => {
+//play video when clicking
+video.addEventListener("click", () => {
   video.play();
 });
