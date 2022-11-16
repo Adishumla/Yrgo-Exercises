@@ -10,14 +10,36 @@ video.addEventListener("mouseover", () => {
   video.play();
 });
 
-// on moblie devices, play video when user stops scrolling for 2 second
-let timer;
-window.addEventListener("scroll", () => {
-  clearTimeout(timer);
-  if (!video.paused) {
-    video.pause();
-  }
-  timer = setTimeout(() => {
-    video.play();
-  }, 2000);
-});
+// on mobile devices, play video when in view after 1 second
+const options = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.5,
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => {
+        video.play();
+      }, 1000);
+    }
+  });
+}, options);
+
+observer.observe(video);
+
+// on mobile devices, pause video when out of view
+const options2 = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.5,
+};
+
+const observer2 = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      video.pause();
+    }
+  });
+}, options2);
