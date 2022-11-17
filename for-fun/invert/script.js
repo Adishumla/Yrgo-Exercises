@@ -10,53 +10,25 @@ video.addEventListener("mouseover", () => {
   video.play();
 });
 
-// on mobile devices, play video when in view after 1 second
-const options = {
-  root: null,
-  rootMargin: "0px",
-  threshold: 1,
-};
+// Determine if an element is in the visible viewport
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
 
-/* const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      setTimeout(() => {
-        video.play();
-      }, 1000);
-    }
-  });
-}, options);
+// determine if the video is in the viewport
+function checkVideo() {
+  if (isInViewport(video)) {
+    video.play();
+  } else {
+    video.pause();
+  }
+}
 
-observer.observe(video);
-
-// on mobile devices, pause video when out of view
-const options2 = {
-  root: null,
-  rootMargin: "0px",
-  threshold: 0.5,
-};
-
-const observer2 = new IntersectionObserver((entries, observer) => {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) {
-      video.pause();
-    }
-  });
-}, options2); */
-
-// play vdeo when in view after 1 second and pause when out of view, only on mobile devices
-const observer = new IntersectionObserver(
-  (entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => {
-          video.play();
-        }, 1000);
-      } else {
-        video.pause();
-      }
-    });
-  } /* , options */
-);
-
-observer.observe(video);
+checkVideo();
