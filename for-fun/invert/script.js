@@ -1,5 +1,6 @@
-const img = document.querySelector("img");
+const img = document.querySelector(".click");
 const video = document.querySelector("video");
+const viewport = document.querySelector(".viewport");
 
 video.addEventListener("mouseleave", () => {
   video.pause();
@@ -22,13 +23,12 @@ function isInViewport(el) {
   );
 }
 
-// determine if the video is in the viewport
-function checkVideo() {
-  if (isInViewport(video)) {
-    video.play();
-  } else {
-    video.pause();
-  }
-}
+const message = document.querySelector("#message");
 
-checkVideo();
+document.addEventListener("scroll", () => {
+  if (isInViewport(viewport)) {
+    message.innerHTML = "In viewport";
+  } else {
+    message.innerHTML = "Not in viewport";
+  }
+});

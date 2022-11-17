@@ -15,7 +15,7 @@ img {
   transition: 0.5s;
 }
 
-img:hover {
+.click:hover {
   filter: grayscale(0);
   box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px 10px 0px -3px,
     rgb(255, 0, 24) 10px 10px, rgb(255, 255, 255) 20px 20px 0px -3px,
@@ -66,4 +66,7 @@ video:hover {
     transform: scale(1.1);
     transform: translate(-10px, -10px) scale(1.1);
   }
+}
+.color-add {
+  filter: grayscale(0);
 }
