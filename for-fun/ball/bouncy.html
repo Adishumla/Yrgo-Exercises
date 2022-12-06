@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    canvas {
+      border: 3px solid black;
+    }
+  </style>
+  <body>
+    <canvas id="canvas" width="200" height="300"></canvas>
+
+    <script>
+      const canvas = document.getElementById("canvas");
+      const ctx = canvas.getContext("2d");
+
+      class Ball {
+        constructor(x, y, size, color) {
+          this.x = x;
+          this.y = y;
+          this.size = size;
+          this.color = color;
+          this.velocity = {
+            x: 100,
+            y: 100,
+          };
+        }
+
+        draw() {
+          ctx.fillStyle = this.color;
+          ctx.fillRect(this.x, this.y, this.size, this.size);
+        }
+
+        update(deltaTime) {
+          this.x += this.velocity.x * deltaTime;
+          this.y += this.velocity.y * deltaTime;
+        }
+
+        checkWallCollision() {
+          if (this.x + this.size > canvas.width || this.x < 0) {
+            this.velocity.x = -this.velocity.x;
+            this.squish();
+          }
+          if (this.y + this.size > canvas.height || this.y < 0) {
+            this.velocity.y = -this.velocity.y;
+            this.squish();
+          }
+        }
+
+        squish() {
+          this.size *= 0.8;
+          this.color = "red";
+        }
+      }
+
+      const ball = new Ball(100, 100, 50, "blue");
+
+      let lastTime = 0;
+      function animate(time) {
+        const deltaTime = (time - lastTime) / 1000;
+        lastTime = time;
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ball.update(deltaTime);
+        ball.checkWallCollision();
+        ball.draw();
+
+        requestAnimationFrame(animate);
+      }
+
+      animate(0);
+    </script>
+  </body>
+</html>
