@@ -1,0 +1,37 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f5f5f5;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #333;
+  height: 200vh;
+}
+
+.image {
+  height: 30rem;
+  object-fit: cover;
+  transition: all 0.5s ease;
+  overflow: hidden;
+  margin: auto;
+}
+.images-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin: 100px auto;
+}
+.images-container {
+  height: 20rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  margin: 0.5rem;
+  transition: all 0.5s ease;
+}
