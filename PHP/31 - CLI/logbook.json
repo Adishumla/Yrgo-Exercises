@@ -1,0 +1,62 @@
+[
+  {
+    "island": "Main island",
+    "hotel": "Centralhotellet",
+    "arrival_date": "2023-01-10",
+    "departure_date": "2023-01-11",
+    "total_cost": "5",
+    "stars": "3",
+    "features": [
+      {
+        "name": "Fanta-minibar",
+        "cost": 3
+      }
+    ],
+    "additional_info": "The crew at Centralhotellet hope you had a great stay"
+  },
+  {
+    "island": "La isla bonita",
+    "hotel": "Grand hotell",
+    "arrival_date": "2023-01-24",
+    "departure_date": "2023-01-26",
+    "total_cost": "14",
+    "stars": "4",
+    "features": [
+      {
+        "name": "Sauna",
+        "cost": 3
+      }
+    ],
+    "additional_info": [
+      {
+        "greeting": "Thank you for choosing Grand hotell",
+        "image": "https://www.publicdomainpictures.net/pictures/320000/nahled/residence-grand-hotel-carezza-italy.jpg"
+      }
+    ]
+  },
+  {
+    "island": "Gotland",
+    "hotel": "Small hostel",
+    "arrival_date": "2023-01-04",
+    "departure_date": "2023-01-05",
+    "total_cost": "11",
+    "stars": "3",
+    "features": [
+      {
+        "name": "Sauna",
+        "cost": 3
+      },
+      {
+        "name": "Color-tv",
+        "cost": 1.5
+      }
+    ],
+    "additional_info": [
+      {
+        "greeting": "Welcome back to Small hostel",
+        "your_rating": 2.4,
+        "forgotten_items": ["Charger, Samsung 2A", "Black sock (used)"]
+      }
+    ]
+  }
+]
