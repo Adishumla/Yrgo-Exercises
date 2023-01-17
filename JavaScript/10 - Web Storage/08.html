@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" style="margin: 0; padding: 0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+        color: white;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      div {
+        background-color: #3536a0;
+        height: 70px;
+        margin: 0;
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body style="margin: 0; width: 100%">
+    <div>
+      <p>
+        This website uses <small>cookies</small> to ensure you get the best
+        experience on our website
+      </p>
+      <button
+        style="
+          background-color: #d63976;
+          border: none;
+          width: 60px;
+          height: 30px;
+        "
+      >
+        Accept
+      </button>
+    </div>
+  </body>
+
+  <!-- <script class="cookies">
+        const button = document.querySelector( "button" );
+        const cookieAlert = document.querySelector( "div" );
+
+        if ( document.cookie == "accepted=true" ) {
+            cookieAlert.classList.add( "hidden" );
+        }
+
+        button.addEventListener( "click", () => {
+            cookieAlert.classList.add( "hidden" );
+
+
+            const accepted = true;
+            const maxAge = 60 * 60;
+            const expires = new Date( Date.now() + maxAge );
+
+            document.cookie = `accepted=${accepted};max-age=${maxAge};expires=${expires.toUTCString()}`;
+        } );
+
+        console.log( document.cookie );
+        console.log( JSON.parse( document.cookie ) )
+    </script> -->
+
+  <script class="local-storage">
+    const button = document.querySelector("button");
+    const cookieAlert = document.querySelector("div");
+
+    if (localStorage.getItem("accepted") === "true") {
+      cookieAlert.classList.add("hidden");
+    }
+
+    button.addEventListener("click", () => {
+      cookieAlert.classList.add("hidden");
+
+      localStorage.setItem("accepted", true);
+    });
+  </script>
+</html>

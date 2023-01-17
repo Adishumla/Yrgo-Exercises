@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body></body>
+  <script>
+    const actor = {
+      name: "Bill Murray",
+      character: "Steve Zissou",
+      imageUrl:
+        "http://www.telegraph.co.uk/content/dam/film/whattowatch/bill-murray/bill-murray-golf.jpg?imwidth=480",
+      dateOfBirth: "September 21, 1950",
+    };
+
+    const data = JSON.stringify(actor);
+
+    localStorage.setItem("actor", data);
+
+    console.log(localStorage.getItem("actor"));
+  </script>
+</html>

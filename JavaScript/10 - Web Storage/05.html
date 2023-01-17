@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>04</title>
+    <style>
+      body {
+        align-items: center;
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+      }
+
+      button {
+        background-image: url("https://media.giphy.com/media/oxqgyeOYXVks/giphy.gif");
+        background-position: center;
+        background-size: cover;
+        clip-path: circle(40%);
+        color: #fff;
+        cursor: pointer;
+        font-family: system-ui;
+        font-size: 50px;
+        height: 200px;
+        width: 200px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button>0</button>
+    <script>
+      let button = document.querySelector("button");
+
+      if (sessionStorage.getItem("counter") > 0) {
+        button.textContent = sessionStorage.getItem("counter");
+      } else {
+        sessionStorage.setItem("counter", 0);
+      }
+
+      button.addEventListener("click", () => {
+        let index = parseInt(sessionStorage.getItem("counter")) + 1;
+
+        sessionStorage.setItem("counter", index);
+
+        button.textContent = sessionStorage.getItem("counter");
+      });
+
+      // TODO: Implement the clicker script here.
+    </script>
+  </body>
+</html>
