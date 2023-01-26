@@ -1,0 +1,10 @@
+{
+    "name": "app/webshop",
+    "description": "A small, but sturdy web shop.",
+    "autoload": {
+        "psr-4": {
+            "App\\Webshop\\": "src/"
+        }
+    },
+    "require": {}
+}
