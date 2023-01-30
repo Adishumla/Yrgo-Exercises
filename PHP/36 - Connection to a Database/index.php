@@ -4,12 +4,14 @@ require __DIR__ . '/vendor/autoload.php';
 
 use App\Database\Connection;
 use App\Database\QueryBuilder;
+use App\Router;
+use App\Request;
 
 $database = new QueryBuilder(
     Connection::make('mysql', '127.0.0.1', 'pokemon', 'root', '')
 );
 
-$pokemon = $database->select()->from('pokemon')->get();
+/* $pokemon = $database->select()->from('pokemon')->get();
 
 printf('There are %d pokemon in the database.', count($pokemon));
 echo "<br>";
@@ -20,7 +22,7 @@ echo "<br>";
 
 $pokemon = $database->select()->from('pokemon')->orderBy('name', 'asc')->limit(3)->get();
 
-print_r($pokemon);
+print_r($pokemon); */
 /*
 Array
 (
@@ -41,13 +43,37 @@ Array
     )
 )
 */
-echo "<br>";
+/* echo "<br>";
 $pokemon = $database->select()->from('pokemon')->orderBy('name', 'desc')->first();
 
 echo $pokemon->name; // Zubat
 
+echo "<br>"; */
+
+/* $pokemon = $database->select()->from('pokemon')->where('id', '=', '18')->first();
+
+echo $pokemon->name; */ // Pidgeot
+
 echo "<br>";
 
-$pokemon = $database->select()->from('pokemon')->where('id', '=', '18')->first();
+$routers = new Router([
+    '/' => __DIR__ . '/views/pokedex.view.php',
+    '/pokemons' => __DIR__ . '/controllers/pokedex.php',
+    '/pokemon' => __DIR__ . '/controllers/pokemon.php',
+]);
 
-echo $pokemon->name; // Pidgeot
+try {
+    $route = $routers->direct("/pokemons");
+    require $route;
+} catch (Exception $e) {
+    echo "Error: " . $e->getMessage();
+}
+
+/* try {
+    $route = $routers->direct(Request::uri());
+    require $route;
+} catch (Exception $e) {
+    echo "Error: " . $e->getMessage();
+} */
+
+$routers->direct(Request::uri());
