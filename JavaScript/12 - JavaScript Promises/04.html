@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>04</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.min.css"
+    />
+    <style>
+      html,
+      body,
+      main {
+        width: 100%;
+        height: 100%;
+      }
+
+      body {
+        background-image: url("https://media.giphy.com/media/l0HU5mgCfQFb0uHe0/giphy.gif");
+        background-position: center;
+        background-size: cover;
+      }
+
+      main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      p {
+        color: #fff;
+        font-size: 20px;
+        font-family: Arial;
+        text-align: center;
+      }
+
+      button {
+        background-color: #181818;
+        border-radius: 3px;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+        color: #fff;
+        cursor: pointer;
+        padding: 10px 20px;
+        transition: transform 150ms ease;
+        border: 1px solid #fff;
+      }
+
+      button:hover {
+        transform: translateY(-3px);
+      }
+
+      button:active {
+        transform: translateY(3px);
+      }
+
+      button:focus {
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="quote"></p>
+      <button>Random The Room Quote</button>
+    </main>
+    <script>
+      // TODO: Implement the get random quote function here.
+
+      const url = "https://yrgo.github.io/api/movies/the-room.json";
+
+      async function getRandomQuote() {
+        const response = await fetch(url);
+
+        const quotes = await response.json();
+
+        const quote = quotes[Math.floor(Math.random() * quotes.length)];
+
+        quoteElement.textContent = `${quote.quote} - ${quote.character}`;
+      }
+
+      const button = document.querySelector("button");
+      const quoteElement = document.querySelector(".quote");
+
+      button.addEventListener("click", () => {
+        getRandomQuote();
+      });
+    </script>
+  </body>
+</html>

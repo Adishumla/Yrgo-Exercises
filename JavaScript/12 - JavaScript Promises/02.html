@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fetch</title>
+  </head>
+  <body>
+    <script>
+      function ask(question) {
+        const firstName = window.prompt(question);
+
+        if (firstName) {
+          return Promise.resolve(firstName);
+        }
+        return Promise.reject("You cancelled the prompt.");
+      }
+      ask("What is your first name?")
+        .then((firstName) => ask(`Oh hi, ${firstName}! How old are you?`))
+        .then((age) => window.alert(`${age}? That's a great age!`))
+        .catch(console.error);
+    </script>
+  </body>
+</html>
