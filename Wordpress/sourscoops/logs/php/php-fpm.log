@@ -1,2 +1,7 @@
 [01-Feb-2023 09:21:23] NOTICE: fpm is running, pid 42643
 [01-Feb-2023 09:21:23] NOTICE: ready to handle connections
+[01-Feb-2023 09:46:25] NOTICE: Terminating ...
+[01-Feb-2023 09:46:25] NOTICE: Terminating ...
+[01-Feb-2023 09:46:25] NOTICE: exiting, bye-bye!
+[01-Feb-2023 09:52:26] NOTICE: fpm is running, pid 43741
+[01-Feb-2023 09:52:26] NOTICE: ready to handle connections
