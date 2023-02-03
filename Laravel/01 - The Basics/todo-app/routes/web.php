@@ -16,14 +16,21 @@ use App\Http\Controllers\LoginController;
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('login');
 
 Route::post('login', LoginController::class);
 
 Route::get('/login', function () {
     return view('index');
-});
+})->name('login')->middleware('guest');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
+})->middleware('auth');
+
+
+Route::get('/logout', function () {
+    auth()->logout();
+    return redirect()->intended('/login');
 });
