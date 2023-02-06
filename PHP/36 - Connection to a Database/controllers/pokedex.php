@@ -5,11 +5,9 @@ declare(strict_types=1);
 
 use App\Database\Connection;
 use App\Database\QueryBuilder;
+use App\Pokemon;
 
-$database = new QueryBuilder(
-    Connection::make('mysql', '127.0.0.1', 'pokemon', 'root', '')
-);
 
-$pokemons = $database->select()->from('pokemon')->get();
-
+$pokemons = new Pokemon();
+$pokemons = $pokemons->getAllPokemonNames();
 require __DIR__ . '/../views/pokedex.view.php';
