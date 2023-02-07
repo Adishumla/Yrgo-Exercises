@@ -1,0 +1,12 @@
+<script>
+  const interval = 10;
+  let i = 1;
+  const episodes = setInterval(() => {
+    if (i <= 188) {
+      console.log(`The Office Episode ${i}`);
+      i++;
+    } else {
+      clearInterval(episodes);
+    }
+  }, interval);
+</script>

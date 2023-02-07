@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05</title>
+    <style>
+      p {
+        font-family: system-ui;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      const conversation = [
+        {
+          name: "Jim Halpert",
+          message: "Question. What kind of bear is best?",
+        },
+        {
+          name: "Dwight Schrute",
+          message: "That's a ridiculous question.",
+        },
+        {
+          name: "Jim Halpert",
+          message: "False. Black bear.",
+        },
+        {
+          name: "Dwight Schrute",
+          message:
+            "That's debatable. There are basically two schools of thought.",
+        },
+        {
+          name: "Jim Halpert",
+          message: "Fact. Bears eat beets. Bears. Beets. Battlestar Galactica.",
+        },
+        {
+          name: "Dwight Schrute",
+          message: "Bears do not... What is going on?! What are you doing?!",
+        },
+      ];
+
+      // TODO: Implement the setInterval script.
+      const body = document.querySelector("body");
+      const interval = 2000;
+      let i = 0;
+
+      const createParagraph = (toPrint) => {
+        const p = document.createElement("p");
+        p.textContent = toPrint;
+        body.appendChild(p);
+      };
+
+      const conversationInterval = setInterval(() => {
+        if (i < conversation.length) {
+          createParagraph(
+            `${conversation[i].name}: ${conversation[i].message}`
+          );
+          i++;
+        } else {
+          clearInterval(conversationInterval);
+        }
+      }, interval);
+    </script>
+  </body>
+</html>

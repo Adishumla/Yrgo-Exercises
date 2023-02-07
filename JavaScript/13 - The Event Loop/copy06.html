@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>06</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        background-color: #111111;
+      }
+    </style>
+  </head>
+  <body style="width: 100vw; height: 100vh">
+    <svg
+      id="yrgo"
+      style=""
+      data-color="#000000"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 240 59"
+    >
+      <g fill-rule="nonzero">
+        <path
+          d="M210.759 58.655c-15.931 0-28.897-13.103-28.897-29.207 0-5.414 1.483-10.69 4.276-15.276A3.48 3.48 0 01190.93 13c1.62 1 2.172 3.138 1.172 4.759-2.137 3.517-3.24 7.551-3.24 11.69 0 12.275 9.827 22.275 21.93 22.275 12.104 0 21.931-10 21.931-22.276s-9.862-22.276-21.93-22.276c-3.553 0-6.897.828-10.035 2.449-1.69.896-3.793.241-4.69-1.483-.897-1.69-.241-3.793 1.483-4.69A28.898 28.898 0 01210.793.207c15.931 0 28.897 13.103 28.897 29.207-.035 16.138-13 29.241-28.931 29.241M94.655 1.897H69.897c-1.449 0-2.69.862-3.207 2.137-.173.414-.31.897-.31 1.414v48.07A3.473 3.473 0 0069.861 57a3.473 3.473 0 003.483-3.483V8.862h21.31c5.828 0 10.552 4.724 10.552 10.552 0 5.827-4.724 10.552-10.552 10.552H82.483A3.473 3.473 0 0079 33.448a3.473 3.473 0 003.483 3.483h12.172c9.655 0 17.517-7.862 17.517-17.517S104.31 1.897 94.655 1.897"
+        />
+        <path
+          d="M108.724 57.069a3.365 3.365 0 01-2.448-1.035L95.793 45.552a3.476 3.476 0 010-4.897 3.476 3.476 0 014.897 0l10.482 10.483a3.476 3.476 0 010 4.896 3.365 3.365 0 01-2.448 1.035m59-27.931h-14.069a3.473 3.473 0 00-3.483 3.483 3.473 3.473 0 003.483 3.482h10.586v17.552a3.473 3.473 0 003.483 3.483 3.473 3.473 0 003.483-3.483V32.621c0-1.931-1.586-3.483-3.483-3.483"
+        />
+        <path
+          d="M150.517 58.828c-15.93 0-28.896-13.104-28.896-29.207 0-16.104 12.965-29.207 28.896-29.207 6.276 0 12.242 2 17.276 5.793 1.517 1.138 1.828 3.345.69 4.862-1.138 1.517-3.345 1.828-4.862.69a21.531 21.531 0 00-13.07-4.38c-12.103 0-21.93 10-21.93 22.276s9.862 22.276 21.93 22.276c1.518 0 3.07-.172 4.587-.483a3.476 3.476 0 014.138 2.655c.414 1.863-.793 3.725-2.69 4.138-2 .345-4.034.587-6.069.587M28.483 56.966A3.473 3.473 0 0125 53.483V32.724a3.473 3.473 0 013.483-3.483 3.473 3.473 0 013.483 3.483v20.759a3.473 3.473 0 01-3.483 3.483m7.276-33.242c-1 0-2-.414-2.656-1.241a3.46 3.46 0 01.449-4.897L51.345 2.76a3.46 3.46 0 014.896.448 3.46 3.46 0 01-.448 4.896L38 22.931c-.69.517-1.483.793-2.241.793m-14.173 0a3.465 3.465 0 01-2.207-.793L1.552 8.103C.069 6.897-.138 4.69 1.103 3.207A3.46 3.46 0 016 2.759l17.828 14.827a3.46 3.46 0 01.448 4.897 3.483 3.483 0 01-2.69 1.241"
+        />
+      </g>
+    </svg>
+    <script>
+      const element = document.getElementById("yrgo");
+      const width = 240;
+      const height = 59;
+      element.style.width = width;
+      element.style.height = height;
+      element.style.fill = "#FFFFFF";
+      let wallsHit = 0;
+
+      // TODO: Implement the requestAnimationFrame script.
+      let locationX, locationY;
+      function step(timestamp) {
+        if (start === undefined) {
+          start = timestamp;
+        }
+        const elapsed = timestamp - start;
+
+        let countX = Math.min(0.1 * elapsed, window.innerWidth - width);
+        let countY = Math.min(0.1 * elapsed, window.innerHeight - height);
+        if (previousTimeStamp !== timestamp) {
+          if (wallsHit > 0) {
+            element.style.transform = `translateX(${countX}px)translateY(${countY--}px)`;
+            if (countX === window.innerWidth - width) {
+              console.log("wall hit");
+              wallsHit--;
+            }
+
+            element.style.transform = `translateX(${countX--}px)translateY(${countY}px)`;
+            //element.style.transform = `translateX(${countX}px)translateY(${countY}px)`;
+          } else {
+            console.log("Else");
+            if (
+              countX === window.window.innerWidth - width ||
+              countY === window.innerHeight - height
+            ) {
+              console.log("wall hit");
+              wallsHit++;
+            }
+            element.style.transform = `translateX(${countX}px)translateY(${countY}px)`;
+            //if (countY === 200) done = true;
+          }
+        }
+
+        if (true) {
+          // Stop the animation after 2 seconds
+          previousTimeStamp = timestamp;
+          if (!done) {
+            window.requestAnimationFrame(step);
+          }
+        }
+      }
+      window.requestAnimationFrame(step);
+      console.log(wallsHit);
+    </script>
+  </body>
+</html>

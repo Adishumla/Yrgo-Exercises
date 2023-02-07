@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02</title>
+    <style>
+      body {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+        width: 100vw;
+      }
+
+      img,
+      button {
+        transform: scale(2);
+      }
+
+      img {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <button type="button">Wait 3 seconds and celebrate</button>
+    <img src="https://media.giphy.com/media/Is1O1TWV0LEJi/giphy.gif" />
+    <script>
+      const image = document.querySelector("img");
+      const button = document.querySelector("button");
+      const timeout = 3000;
+      button.addEventListener("click", () => {
+        button.style.display = "none";
+        setTimeout(() => {
+          image.style.display = "block";
+        }, timeout);
+      });
+      // TODO: Implement the setTimeout script.
+    </script>
+  </body>
+</html>
