@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\CreateTaskController;
+use App\Http\Controllers\CompleteTaskController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,3 +36,7 @@ Route::get('/logout', function () {
     auth()->logout();
     return redirect()->intended('/login');
 });
+
+Route::post('/task', CreateTaskController::class)->middleware('auth');
+
+Route::patch('tasks/{task}/complete', CompleteTaskController::class)->middleware('auth');
