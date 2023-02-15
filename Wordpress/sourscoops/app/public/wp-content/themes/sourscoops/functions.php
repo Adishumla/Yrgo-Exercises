@@ -34,3 +34,17 @@ function print_a($data)
     <pre class="block p-6 m-6 border border-brown rounded-xl text-xs overflow-hidden"><code><?php print_r($data); ?></code></pre>
 <?php
 }
+
+add_action('init', function () {
+    // create a new custom post called ice cream and add it to the admin menu with a custom icon
+    register_post_type('ice-cream', array(
+        'labels' => array(
+            'name' => __('Ice Cream'),
+            'singular_name' => __('Ice Cream'),
+        ),
+        'public' => true,
+        'has_archive' => true,
+        'menu_icon' => 'dashicons-thumbs-down',
+        'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'custom-fields'),
+    ));
+});

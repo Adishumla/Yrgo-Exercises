@@ -12,3 +12,19 @@
 [01-Feb-2023 11:01:39 UTC] PHP Notice:  fwrite(): Send of 236 bytes failed with errno=32 Broken pipe in /Users/adam/.vscode/extensions/zobo.php-intellisense-1.0.13/vendor/felixfbecker/language-server/src/StderrLogger.php on line 23
 [08-Feb-2023 08:39:06 UTC] PHP Notice:  fwrite(): Send of 236 bytes failed with errno=32 Broken pipe in /Users/adam/.vscode/extensions/zobo.php-intellisense-1.0.13/vendor/felixfbecker/language-server/src/StderrLogger.php on line 23
 [08-Feb-2023 09:30:05 UTC] PHP Parse error:  syntax error, unexpected token "<" in /Users/adam/Documents/GitHub/Yrgo-Exercises/Wordpress/sourscoops/app/public/wp-content/themes/sourscoops/index.php on line 8
+[15-Feb-2023 08:17:49 UTC] PHP Notice:  fwrite(): Send of 235 bytes failed with errno=32 Broken pipe in /Users/adam/.vscode/extensions/zobo.php-intellisense-1.1.0/vendor/felixfbecker/language-server/src/StderrLogger.php on line 23
+[15-Feb-2023 10:00:49 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting "elseif" or "else" or "endif" in /Users/adam/Documents/GitHub/Yrgo-Exercises/Wordpress/sourscoops/app/public/wp-content/themes/sourscoops/archive-ice-cream.php on line 17
+[15-Feb-2023 10:30:30 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function the_field() in /Users/adam/Documents/GitHub/Yrgo-Exercises/Wordpress/sourscoops/app/public/wp-content/themes/sourscoops/single-ice-cream.php:6
+Stack trace:
+#0 /Users/adam/Documents/GitHub/Yrgo-Exercises/Wordpress/sourscoops/app/public/wp-includes/template-loader.php(106): include()
+#1 /Users/adam/Documents/GitHub/Yrgo-Exercises/Wordpress/sourscoops/app/public/wp-blog-header.php(19): require_once('/Users/adam/Doc...')
+#2 /Users/adam/Documents/GitHub/Yrgo-Exercises/Wordpress/sourscoops/app/public/index.php(17): require('/Users/adam/Doc...')
+#3 {main}
+  thrown in /Users/adam/Documents/GitHub/Yrgo-Exercises/Wordpress/sourscoops/app/public/wp-content/themes/sourscoops/single-ice-cream.php on line 6
+[15-Feb-2023 10:30:36 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function the_field() in /Users/adam/Documents/GitHub/Yrgo-Exercises/Wordpress/sourscoops/app/public/wp-content/themes/sourscoops/single-ice-cream.php:6
+Stack trace:
+#0 /Users/adam/Documents/GitHub/Yrgo-Exercises/Wordpress/sourscoops/app/public/wp-includes/template-loader.php(106): include()
+#1 /Users/adam/Documents/GitHub/Yrgo-Exercises/Wordpress/sourscoops/app/public/wp-blog-header.php(19): require_once('/Users/adam/Doc...')
+#2 /Users/adam/Documents/GitHub/Yrgo-Exercises/Wordpress/sourscoops/app/public/index.php(17): require('/Users/adam/Doc...')
+#3 {main}
+  thrown in /Users/adam/Documents/GitHub/Yrgo-Exercises/Wordpress/sourscoops/app/public/wp-content/themes/sourscoops/single-ice-cream.php on line 6
