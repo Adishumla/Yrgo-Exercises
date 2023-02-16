@@ -38,5 +38,4 @@ Route::get('/logout', function () {
 });
 
 Route::post('/task', CreateTaskController::class)->middleware('auth');
-
 Route::patch('tasks/{task}/complete', CompleteTaskController::class)->middleware('auth');
