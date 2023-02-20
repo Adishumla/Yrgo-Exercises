@@ -1,0 +1,30 @@
+{
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "express": "^4.18.2",
+    "f-ck": "^2.0.2",
+    "kleur": "^4.1.5",
+    "pokemon": "^2.3.4",
+    "prettier": "^2.8.4",
+    "prompts": "^2.4.2",
+    "servor": "^4.0.2"
+  },
+  "scripts": {
+    "start": "npx express",
+    "dev": "servor . 05.html 8080 --reload --browse",
+    "build": "test build"
+  },
+  "prettier": {
+    "printWidth": 80,
+    "tabWidth": 2,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "bracketSpacing": true,
+    "jsxBracketSameLine": false,
+    "arrowParens": "always",
+    "proseWrap": "preserve"
+  }
+}

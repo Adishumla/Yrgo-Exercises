@@ -1,0 +1,7 @@
+{
+  "type": "module",
+  "dependencies": {
+    "pokemon": "^2.3.4",
+    "prompts": "^2.4.2"
+  }
+}
