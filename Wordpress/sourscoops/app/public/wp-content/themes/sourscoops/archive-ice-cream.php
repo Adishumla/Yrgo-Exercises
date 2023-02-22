@@ -4,7 +4,7 @@
     <?php if (have_posts()) : ?>
         <!-- Display products in grid using the loop and get_template_part -->
         <?php while (have_posts()) : the_post(); ?>
-            <?php get_template_part('parts/shared/post-card', 'post-card', array()); ?>
+            <?php get_template_part('parts/shared/post-card', 'product-card', array()); ?>
         <?php endwhile; ?>
 
         <div class="col-span-full flex justify-between">
