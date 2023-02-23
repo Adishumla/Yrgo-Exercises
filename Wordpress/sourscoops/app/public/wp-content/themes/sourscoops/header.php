@@ -1,3 +1,8 @@
+<?php
+$primary_menu = wp_get_nav_menu_items('primary-menu');
+$secondary_menu = wp_get_nav_menu_items('secondary-menu');
+$current_page_id = get_queried_object_id();
+?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 
@@ -13,25 +18,20 @@
 
 <body <?php body_class("bg-pink-light text-brown"); ?>>
     <?php wp_body_open(); ?>
-    <?php $menuItems = wp_get_nav_menu_items('primary-menu'); ?>
-
     <nav class="font-mono border-b-2 border-brown text-lg px-8">
         <div class="max-w-7xl mx-auto grid grid-cols-12">
             <div class="col-span-5 py-5 flex gap-10 items-center">
-                <?php $currentPageId = get_queried_object_id();
-                if ($menuItems) foreach ($menuItems as $item) : ?>
-                    <a title="<?= $item->title; ?>" class="<?= $currentPageId == $item->object_id ? 'underline' : '' ?>" href="<?= $item->url; ?>">
-                        <?= $item->title; ?>
-                    </a>
+                <?php if ($primary_menu) foreach ($primary_menu as $link) : ?>
+                    <a title="<?= $link->title; ?>" class="<?= $current_page_id == $link->object_id ? 'underline' : ''; ?>" href="<?= $link->url; ?>"><?= $link->title; ?></a>
                 <?php endforeach; ?>
             </div>
             <div class="col-span-2 flex justify-center items-center py-3">
-                <a href="<?= site_url(); ?>"><img class="h-16 w-auto" src="<?= get_template_directory_uri(); ?>/src/images/sour-scoops-logo.svg" />
-                </a>
+                <a href="/"><img class="h-16 w-auto" src="<?= get_template_directory_uri(); ?>/src/images/sour-scoops-logo.svg" /></a>
             </div>
             <div class="col-span-5 flex justify-end items-center py-5">
-                <a href="<?= site_url(); ?>/shop" class="bg-brown text-pink-light px-4 py-2 rounded-xl">Get one now 👉</a>
-
+                <?php if ($secondary_menu) foreach ($secondary_menu as $link) : ?>
+                    <a title="<?= $link->title; ?>" class="<?= $current_page_id == $link->object_id ? 'underline' : ''; ?>" href="<?= $link->url; ?>"><?= $link->title; ?></a>
+                <?php endforeach; ?>
             </div>
         </div>
     </nav>
