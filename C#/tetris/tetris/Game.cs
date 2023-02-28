@@ -9,13 +9,12 @@ using tetris;
 class Game
 {
     Board board = new Board();
-    
     public Game()
     {
         board.PrintBoard();
     }
+    
     ScheduleTimer? _timer;
-
     public bool Paused { get; private set; }
     public bool GameOver { get; private set; }
 
