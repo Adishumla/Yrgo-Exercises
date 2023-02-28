@@ -1,0 +1,15 @@
+/Users/adam/Documents/GitHub/Yrgo-Exercises/C#/tetris/tetris/obj/Debug/net7.0/tetris.csproj.AssemblyReference.cache
+/Users/adam/Documents/GitHub/Yrgo-Exercises/C#/tetris/tetris/obj/Debug/net7.0/tetris.GeneratedMSBuildEditorConfig.editorconfig
+/Users/adam/Documents/GitHub/Yrgo-Exercises/C#/tetris/tetris/obj/Debug/net7.0/tetris.AssemblyInfoInputs.cache
+/Users/adam/Documents/GitHub/Yrgo-Exercises/C#/tetris/tetris/obj/Debug/net7.0/tetris.AssemblyInfo.cs
+/Users/adam/Documents/GitHub/Yrgo-Exercises/C#/tetris/tetris/obj/Debug/net7.0/tetris.csproj.CoreCompileInputs.cache
+/Users/adam/Documents/GitHub/Yrgo-Exercises/C#/tetris/tetris/bin/Debug/net7.0/tetris
+/Users/adam/Documents/GitHub/Yrgo-Exercises/C#/tetris/tetris/bin/Debug/net7.0/tetris.deps.json
+/Users/adam/Documents/GitHub/Yrgo-Exercises/C#/tetris/tetris/bin/Debug/net7.0/tetris.runtimeconfig.json
+/Users/adam/Documents/GitHub/Yrgo-Exercises/C#/tetris/tetris/bin/Debug/net7.0/tetris.dll
+/Users/adam/Documents/GitHub/Yrgo-Exercises/C#/tetris/tetris/bin/Debug/net7.0/tetris.pdb
+/Users/adam/Documents/GitHub/Yrgo-Exercises/C#/tetris/tetris/obj/Debug/net7.0/tetris.dll
+/Users/adam/Documents/GitHub/Yrgo-Exercises/C#/tetris/tetris/obj/Debug/net7.0/refint/tetris.dll
+/Users/adam/Documents/GitHub/Yrgo-Exercises/C#/tetris/tetris/obj/Debug/net7.0/tetris.pdb
+/Users/adam/Documents/GitHub/Yrgo-Exercises/C#/tetris/tetris/obj/Debug/net7.0/tetris.genruntimeconfig.cache
+/Users/adam/Documents/GitHub/Yrgo-Exercises/C#/tetris/tetris/obj/Debug/net7.0/ref/tetris.dll
