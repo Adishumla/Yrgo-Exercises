@@ -46,13 +46,35 @@ class Game
 
     public void Input(ConsoleKey key)
     {
-        Console.WriteLine($"Player pressed key: {key}");
+        /*Console.WriteLine($"Player pressed key: {key}");*/
+        
+        /*switch (key)
+        {
+            case ConsoleKey.UpArrow:
+                Console.WriteLine("Up");
+                break;
+            case ConsoleKey.DownArrow:
+                Console.WriteLine("Down");
+                break;
+            case ConsoleKey.LeftArrow:
+                Console.WriteLine("Left");
+                break;
+            case ConsoleKey.RightArrow:
+                Console.WriteLine("Right");
+                break;
+        }*/
+        
+        /*Do above but move the Tetromino*/
+        
     }
 
     void Tick()
     {
         // schedule the next tick
         ScheduleNextTick();
+        
+        /*move tetromino down every tick*/
+        
     }
 
     void ScheduleNextTick()

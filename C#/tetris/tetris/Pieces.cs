@@ -2,15 +2,14 @@ namespace tetris;
 
 public class Pieces
 {
-    /*Create a class for the Tetrominoes (the shapes that fall from the top of the screen). You can represent each Tetromino as a 2D array of characters, where each non-empty cell represents a block. You will need to define methods for rotating and moving the Tetrominoes.*/
-    public char[,] piece = new char[4, 4];
+    public readonly char[,] Piece = new char[4, 4];
     public Pieces()
     {
         for (int i = 0; i < 4; i++)
         {
             for (int j = 0; j < 4; j++)
             {
-                piece[i, j] = ' ';
+                Piece[i, j] = ' ';
             }
         }
     }
@@ -21,14 +20,14 @@ public class Pieces
         {
             for (int j = 0; j < 4; j++)
             {
-                temp[i, j] = piece[i, j];
+                temp[i, j] = Piece[i, j];
             }
         }
         for (int i = 0; i < 4; i++)
         {
             for (int j = 0; j < 4; j++)
             {
-                piece[i, j] = temp[3 - j, i];
+                Piece[i, j] = temp[3 - j, i];
             }
         }
     }
@@ -38,10 +37,10 @@ public class Pieces
         {
             for (int j = 0; j < 4; j++)
             {
-                if (piece[i, j] != ' ')
+                if (Piece[i, j] != ' ')
                 {
-                    piece[i, j - 1] = piece[i, j];
-                    piece[i, j] = ' ';
+                    Piece[i, j - 1] = Piece[i, j];
+                    Piece[i, j] = ' ';
                 }
             }
         }
@@ -52,10 +51,10 @@ public class Pieces
         {
             for (int j = 3; j >= 0; j--)
             {
-                if (piece[i, j] != ' ')
+                if (Piece[i, j] != ' ')
                 {
-                    piece[i, j + 1] = piece[i, j];
-                    piece[i, j] = ' ';
+                    Piece[i, j + 1] = Piece[i, j];
+                    Piece[i, j] = ' ';
                 }
             }
         }
@@ -66,10 +65,10 @@ public class Pieces
         {
             for (int j = 0; j < 4; j++)
             {
-                if (piece[i, j] != ' ')
+                if (Piece[i, j] != ' ')
                 {
-                    piece[i + 1, j] = piece[i, j];
-                    piece[i, j] = ' ';
+                    Piece[i + 1, j] = Piece[i, j];
+                    Piece[i, j] = ' ';
                 }
             }
         }
@@ -80,7 +79,7 @@ public class Pieces
         {
             for (int j = 0; j < 4; j++)
             {
-                Console.Write(piece[i, j]);
+                Console.Write(Piece[i, j]);
             }
             Console.WriteLine();
         }
