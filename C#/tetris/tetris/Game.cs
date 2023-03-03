@@ -77,16 +77,20 @@ class Game
     {
         Console.Clear();
         board.ClearLines();
-        if (piece.CanMove(board, 0, 0))
+        if (piece.CanMove(board, 0, 1))
         {
-            piece.Move(0, 1);
+            piece.Move(0, 0);
+            board.Draw();
         }
         else
         {
-            board.SetBlock( 0, 0);
-            piece = new Piece(new bool[,] { { true, true, true, true } }, 0, 0);
+            piece.Move(0, 1);
+            board.Draw();
+            //board.SetBlock( 0, 0);
+            //piece = new Piece( new bool[,] { { true, true, true, true } }, 2, 0);
         }
-        board.Draw();
+        //board.Draw();
+        piece.Draw(board);
         // schedule the next tick
         ScheduleNextTick();
     }

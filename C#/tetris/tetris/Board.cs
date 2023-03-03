@@ -23,11 +23,11 @@ public class Board
                     Console.Write("[ ]");
                 }
             }
+
             Console.WriteLine();
         }
     }
-
-
+    
     public bool IsValidPosition(int x, int y)
     {
         return x >= 0 && x < BoardWidth && y >= 0 && y < BoardHeight && !_board[x, y];
