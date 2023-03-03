@@ -1,0 +1,15 @@
+/Users/adam/Documents/GitHub/Yrgo-Exercises/C#/week7/Assignment 7-3/bin/Debug/net7.0/Assignment 7-3
+/Users/adam/Documents/GitHub/Yrgo-Exercises/C#/week7/Assignment 7-3/bin/Debug/net7.0/Assignment 7-3.deps.json
+/Users/adam/Documents/GitHub/Yrgo-Exercises/C#/week7/Assignment 7-3/bin/Debug/net7.0/Assignment 7-3.runtimeconfig.json
+/Users/adam/Documents/GitHub/Yrgo-Exercises/C#/week7/Assignment 7-3/bin/Debug/net7.0/Assignment 7-3.dll
+/Users/adam/Documents/GitHub/Yrgo-Exercises/C#/week7/Assignment 7-3/bin/Debug/net7.0/Assignment 7-3.pdb
+/Users/adam/Documents/GitHub/Yrgo-Exercises/C#/week7/Assignment 7-3/obj/Debug/net7.0/Assignment 7-3.csproj.AssemblyReference.cache
+/Users/adam/Documents/GitHub/Yrgo-Exercises/C#/week7/Assignment 7-3/obj/Debug/net7.0/Assignment 7-3.GeneratedMSBuildEditorConfig.editorconfig
+/Users/adam/Documents/GitHub/Yrgo-Exercises/C#/week7/Assignment 7-3/obj/Debug/net7.0/Assignment 7-3.AssemblyInfoInputs.cache
+/Users/adam/Documents/GitHub/Yrgo-Exercises/C#/week7/Assignment 7-3/obj/Debug/net7.0/Assignment 7-3.AssemblyInfo.cs
+/Users/adam/Documents/GitHub/Yrgo-Exercises/C#/week7/Assignment 7-3/obj/Debug/net7.0/Assignment 7-3.csproj.CoreCompileInputs.cache
+/Users/adam/Documents/GitHub/Yrgo-Exercises/C#/week7/Assignment 7-3/obj/Debug/net7.0/Assignment 7-3.dll
+/Users/adam/Documents/GitHub/Yrgo-Exercises/C#/week7/Assignment 7-3/obj/Debug/net7.0/refint/Assignment 7-3.dll
+/Users/adam/Documents/GitHub/Yrgo-Exercises/C#/week7/Assignment 7-3/obj/Debug/net7.0/Assignment 7-3.pdb
+/Users/adam/Documents/GitHub/Yrgo-Exercises/C#/week7/Assignment 7-3/obj/Debug/net7.0/Assignment 7-3.genruntimeconfig.cache
+/Users/adam/Documents/GitHub/Yrgo-Exercises/C#/week7/Assignment 7-3/obj/Debug/net7.0/ref/Assignment 7-3.dll
