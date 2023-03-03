@@ -51,6 +51,25 @@ class Game
 
     public void Input(ConsoleKey key) 
     {
+        switch (key)
+        {
+            case ConsoleKey.UpArrow:
+                if (piece.CanMove(board, 0, -1))
+                    piece.Move(0, -1);
+                break;
+            case ConsoleKey.DownArrow:
+                if (piece.CanMove(board, 0, 1))
+                    piece.Move(0, 1);
+                break;
+            case ConsoleKey.LeftArrow:
+                if (piece.CanMove(board, -1, 0))
+                    piece.Move(-1, 0);
+                break;
+            case ConsoleKey.RightArrow:
+                if (piece.CanMove(board, 1, 0))
+                    piece.Move(1, 0);
+                break;
+        }
         
     }
 
