@@ -1,218 +1,334 @@
 ﻿using System.Drawing;
 
-class GameBoard
-{
-    public int Width { get; set; }
-    public int Height { get; set; }
-    public const int EMPTY_CELL = 0;
-    public const int SNAKE_CELL = 1;
-    public const int FOOD_CELL = 2;
-    public int[,] Board { get; set; }
+var game = new Game();
 
-    public GameBoard(int width, int height)
+game.Start();
+
+while (!game.GameOver)
+{
+    // listen to key presses
+    if (Console.KeyAvailable)
     {
-        Width = width;
-        Height = height;
-        Board = new int[width, height];
+        var input = Console.ReadKey(true);
+
+        switch (input.Key)
+        {
+            // send key presses to the game if it's not paused
+            case ConsoleKey.UpArrow:
+            case ConsoleKey.DownArrow:
+            case ConsoleKey.LeftArrow:
+            case ConsoleKey.RightArrow:
+                if (!game.Paused)
+                    game.Input(input.Key);
+                break;
+
+            case ConsoleKey.P:
+                if (game.Paused)
+                    game.Resume();
+                else
+                    game.Pause();
+                break;
+
+            case ConsoleKey.Escape:
+                game.Stop();
+                return;
+        }
     }
+}
+
+class ScheduleTimer : IDisposable
+{
+    public bool Aborted { get; private set; }
+
+    bool _active = true;
+
+    long _start;
+    long _time;
+
+    System.Timers.Timer? _timer;
+
+    readonly Action _action;
+
+    public ScheduleTimer(int time, Action action)
+    {
+        _time = time;
+        _action = () =>
+        {
+            _active = false;
+            action();
+        };
+
+        Resume();
+    }
+
+    public void Abort()
+    {
+        Aborted = true;
+        Invalidate();
+    }
+
+    public void Pause()
+    {
+        if (_active && !Aborted)
+        {
+            Invalidate();
+            _time = Math.Max(1, _time - (DateTimeOffset.Now.ToUnixTimeMilliseconds() - _start));
+        }
+    }
+
+    public void Resume()
+    {
+        if (_active && !Aborted)
+        {
+            _start = DateTimeOffset.Now.ToUnixTimeMilliseconds();
+            _timer = new System.Timers.Timer(_time);
+            _timer.Elapsed += (sender, arg) => _action();
+            _timer.AutoReset = false;
+            _timer.Start();
+        }
+    }
+
+    void Invalidate()
+    {
+        if (_timer != null)
+        {
+            _timer.Enabled = false;
+            _timer.Close();
+            _timer = null;
+        }
+    }
+
+    public void Dispose() => Invalidate();
+}
+
+class Game
+{
+    ScheduleTimer? _timer;
+    Board _board;
+    Snake snake = new Snake(new Point(0, 0));
+    public bool Paused { get; private set; }
+    public bool GameOver { get; private set; }
+    private Food _food;
+    public Game()
+    {
+        _board = new Board(10, 10);
+        _food = new Food(new Point( new Random().Next(0, _board.Width), new Random().Next(0, _board.Height)), _board);
+    }
+
+    public void Start()
+    {
+        Console.WriteLine("Start");
+        ScheduleNextTick();
+    }
+
+    public void Pause()
+    {
+        Console.WriteLine("Pause");
+        Paused = true;
+        _timer!.Pause();
+    }
+
+    public void Resume()
+    {
+        Console.WriteLine("Resume");
+        Paused = false;
+        _timer!.Resume();
+    }
+
+    public void Stop()
+    {
+        Console.WriteLine("Stop");
+        GameOver = true;
+    }
+
+    public void Input(ConsoleKey key)
+    {
+        switch (key)
+        {
+            case ConsoleKey.UpArrow:
+                snake.Direction = Direction.Up;
+                break;
+            case ConsoleKey.DownArrow:
+                snake.Direction = Direction.Down;
+                break;
+            case ConsoleKey.LeftArrow:
+                snake.Direction = Direction.Left;
+                break;
+            case ConsoleKey.RightArrow:
+                snake.Direction = Direction.Right;
+                break;
+        }
+    }
+
+    void Tick()
+    {
+        snake.Move();
+        
+        if (snake.CollidesWithSelf())
+        {
+            Stop();
+            return;
+        }
+        
+        if (snake.Head.X < 0 || snake.Head.X >= _board.Width || snake.Head.Y < 0 || snake.Head.Y >= _board.Height)
+        {
+            Stop();
+            return;
+        }
+
+        if (snake.Head == _food.Position)
+        {
+            snake.Grow();
+            _food.Respawn();
+        }
+
+        ScheduleNextTick();
+        
+        _board.Draw(snake, _food);
+        Console.BackgroundColor = ConsoleColor.Black;
+        Console.ForegroundColor = ConsoleColor.White;
+        Console.WriteLine("Score: " + snake.Body.Count);
+
+    }
+
+    void ScheduleNextTick()
+    {
+        // the game will automatically update itself every half a second, adjust as needed
+        _timer = new ScheduleTimer(500, Tick);
+    }
+    
+}
+
+enum Direction
+{
+    Up,
+    Down,
+    Left,
+    Right
 }
 
 class Snake
 {
-    public List<Point> Body { get; set; }
-    public int Length { get; set; }
-    public int Direction { get; set; }
-    public Point Position { get; set; }
+    public List<Point> Body { get; private set; }
+    public Point Head => Body.Last();
+    public Direction Direction { get; set; }
 
-    public Snake()
+    public Snake(Point headPosition)
     {
-        Body = new List<Point>();
-        Length = 1;
-        Direction = 0;
-        Position = new Point(0, 0);
+        Body = new List<Point> { headPosition };
+        Direction = Direction.Right;
+    }
+
+    public void Move()
+    {
+        var newHeadPosition = Head.Add(Direction.ToPoint());
+        Body.Add(newHeadPosition);
+        Body.RemoveAt(0);
+    }
+    
+    public void Grow()
+    {
+        var newHeadPosition = Head.Add(Direction.ToPoint());
+        Body.Add(newHeadPosition);
+    }
+
+    public bool CollidesWithSelf()
+    {
+        return Body.Take(Body.Count - 1).Contains(Head);
     }
 }
 
-class Point : IEquatable<Point>
+class Food
 {
-    public int X { get; set; }
-    public int Y { get; set; }
+    public Point Position { get; private set; }
+    private Board _board;
 
-    public Point(int x, int y)
+    /*public Food(Point position)
     {
-        X = x;
-        Y = y;
-    }
-
-    public bool Equals(Point other)
-    {
-        return X == other.X && Y == other.Y;
-    }
-}
-
-class Move : IEquatable<Move>
-{
-    public int Direction { get; set; }
-    public int Score { get; set; }
-    public Point Position { get; set; }
-
-    public Move(int direction, int score, Point position)
-    {
-        Direction = direction;
-        Score = score;
         Position = position;
+    }*/
+    
+    public Food(Point position, Board board)
+    {
+        Position = position;
+        _board = board;
     }
 
-    public bool Equals(Move other)
+    public void Respawn()
     {
-        return Direction == other.Direction && Score == other.Score && Position.Equals(other.Position);
-    }
-}
-
-class Loop
-{
-    public int Direction { get; set; }
-    public int Length { get; set; }
-
-    public Loop(int direction, int length)
-    {
-        Direction = direction;
-        Length = length;
+        Position = new Point(
+            new Random().Next(0, _board.Width),
+            new Random().Next(0, _board.Height)
+        );
     }
 }
 
-class GenerateFood
+static class DirectionExtensions
 {
-    public static Point Generate(GameBoard board, Snake snake)
+    public static Point ToPoint(this Direction direction)
     {
-        var random = new Random();
-        var x = random.Next(0, board.Width);
-        var y = random.Next(0, board.Height);
-        var position = new Point(x, y);
-
-        while (snake.Body.Contains(position))
+        return direction switch
         {
-            x = random.Next(0, board.Width);
-            y = random.Next(0, board.Height);
-            position = new Point(x, y);
-        }
-
-        return position;
+            Direction.Up => new Point(0, -1),
+            Direction.Down => new Point(0, 1),
+            Direction.Left => new Point(-1, 0),
+            Direction.Right => new Point(1, 0),
+            _ => throw new ArgumentException("Invalid direction", nameof(direction))
+        };
     }
 }
 
-class Collision
+static class PointExtensions
 {
-    public static bool Check(GameBoard board, Snake snake)
+    public static Point Add(this Point point, Point other)
     {
-        var head = snake.Body[0];
-        var body = snake.Body.Skip(1).ToList();
-
-        if (head.X < 0 || head.X >= board.Width || head.Y < 0 || head.Y >= board.Height)
-        {
-            return true;
-        }
-
-        if (body.Contains(head))
-        {
-            return true;
-        }
-
-        return false;
+        return new Point(point.X + other.X, point.Y + other.Y);
     }
 }
 
-class Program
+class Board
 {
-    static void Main(string[] args)
+    public int Width { get; }
+    public int Height { get; }
+
+    public Board(int width, int height)
     {
-        var board = new GameBoard(20, 20);
-        var snake = new Snake();
-        var food = GenerateFood.Generate(board, snake);
+        Width = width;
+        Height = height;
+    }
+
+    public bool IsInside(Point point)
+    {
+        return point.X >= 0 && point.X < Width && point.Y >= 0 && point.Y < Height;
+    }
+    
+    public void Draw(Snake snake, Food food)
+    {
+        Console.Clear();
+        Console.SetCursorPosition(0, 0);
+        Console.WriteLine();
         
-        /*snake*/
-        snake.Body.Add(new Point(1, 0));
-        
-        while (true)
+        for (var y = 0; y < Height; y++)
         {
-            // Check for user input and update snake direction
-            if (Console.KeyAvailable)
+            for (var x = 0; x < Width; x++)
             {
-                var key = Console.ReadKey(true).Key;
-                if (key == ConsoleKey.UpArrow)
+                var point = new Point(x, y);
+                if (snake.Body.Contains(point))
                 {
-                    snake.Direction = 0;
+                    Console.Write("O");
                 }
-                else if (key == ConsoleKey.RightArrow)
+                else if (food.Position == point)
                 {
-                    snake.Direction = 1;
+                    Console.Write("X");
                 }
-                else if (key == ConsoleKey.DownArrow)
+                else
                 {
-                    snake.Direction = 2;
-                }
-                else if (key == ConsoleKey.LeftArrow)
-                {
-                    snake.Direction = 3;
+                    Console.Write(" ");
                 }
             }
-            // Move the snake
-            if (snake.Direction == 0)
-            {
-                snake.Position = new Point(snake.Position.X, snake.Position.Y - 1);
-            }
-            else if (snake.Direction == 1)
-            {
-                snake.Position = new Point(snake.Position.X + 1, snake.Position.Y);
-            }
-            else if (snake.Direction == 2)
-            {
-                snake.Position = new Point(snake.Position.X, snake.Position.Y + 1);
-            }
-            else if (snake.Direction == 3)
-            {
-                snake.Position = new Point(snake.Position.X - 1, snake.Position.Y);
-            }
-            // Check for collision with walls or snake body
-            if (Collision.Check(board, snake))
-            {
-                break;
-            }
-            // Check for collision with food and update game score
-            if (snake.Position.Equals(food))
-            {
-                snake.Length++;
-                food = GenerateFood.Generate(board, snake);
-            }
-            // Generate new food if necessary
-            if (snake.Length == board.Width * board.Height)
-            {
-                food = GenerateFood.Generate(board, snake);
-            }
-            // Redraw the game board
-            for (var y = 0; y < board.Height; y++)
-            {
-                for (var x = 0; x < board.Width; x++)
-                {
-                    var position = new Point(x, y);
-                    if (snake.Body.Contains(position))
-                    {
-                        board.Board[x, y] = GameBoard.SNAKE_CELL;
-                    }
-                    else if (position.Equals(food))
-                    {
-                        board.Board[x, y] = GameBoard.FOOD_CELL;
-                    }
-                    else
-                    {
-                        board.Board[x, y] = GameBoard.EMPTY_CELL;
-                    }
-                }
-            }
-            // Wait for a short amount of time before repeating loop
-            Thread.Sleep(100);
+            Console.WriteLine();
         }
-        
-        Console.WriteLine("Game Over!");
     }
 }
+
+
