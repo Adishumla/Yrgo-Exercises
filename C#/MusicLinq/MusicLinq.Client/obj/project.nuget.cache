@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "aXQJu9x8LBHjHz3SWxdz4FrXXRrBvJaRZnRKFT8wOhqCb52OH54ZbteQnOS2laG4KKYch8mKSj3nvYS2Td3FpQ==",
+  "success": true,
+  "projectFilePath": "/Users/adam/Downloads/MusicLinq/MusicLinq.Client/MusicLinq.Client.csproj",
+  "expectedPackageFiles": [
+    "/Users/adam/.nuget/packages/microsoft.netcore.app.ref/6.0.12/microsoft.netcore.app.ref.6.0.12.nupkg.sha512",
+    "/Users/adam/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.12/microsoft.aspnetcore.app.ref.6.0.12.nupkg.sha512",
+    "/Users/adam/.nuget/packages/microsoft.netcore.app.host.osx-arm64/6.0.12/microsoft.netcore.app.host.osx-arm64.6.0.12.nupkg.sha512"
+  ],
+  "logs": []
+}
