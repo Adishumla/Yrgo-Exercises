@@ -61,12 +61,6 @@ class ScheduleTimer : IDisposable
         Resume();
     }
 
-    public void Abort()
-    {
-        Aborted = true;
-        Invalidate();
-    }
-
     public void Pause()
     {
         if (_active && !Aborted)
@@ -243,11 +237,6 @@ class Food
     public Point Position { get; private set; }
     private Board _board;
 
-    /*public Food(Point position)
-    {
-        Position = position;
-    }*/
-    
     public Food(Point position, Board board)
     {
         Position = position;
