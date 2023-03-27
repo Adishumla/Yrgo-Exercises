@@ -32,3 +32,5 @@ Stack trace:
 [22-Feb-2023 10:26:23 UTC] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in /Users/adam/Documents/GitHub/Yrgo-Exercises/Wordpress/sourscoops/app/public/wp-content/themes/sourscoops/front-page.php on line 10
 [23-Feb-2023 18:48:26 UTC] PHP Notice:  fwrite(): Send of 235 bytes failed with errno=32 Broken pipe in /Users/adam/.vscode/extensions/zobo.php-intellisense-1.1.2/vendor/felixfbecker/language-server/src/StderrLogger.php on line 23
 [20-Mar-2023 13:20:35 UTC] PHP Notice:  fwrite(): Send of 235 bytes failed with errno=32 Broken pipe in /Users/adam/.vscode/extensions/zobo.php-intellisense-1.1.2/vendor/felixfbecker/language-server/src/StderrLogger.php on line 23
+[27-Mar-2023 14:14:21 UTC] PHP Warning:  Attempt to read property "title" on null in /Users/adam/Documents/GitHub/Yrgo-Exercises/Wordpress/sourscoops/app/public/wp-includes/class-wp-customize-widgets.php on line 900
+[27-Mar-2023 18:23:17 UTC] PHP Notice:  fwrite(): Send of 235 bytes failed with errno=32 Broken pipe in /Users/adam/.vscode/extensions/zobo.php-intellisense-1.1.2/vendor/felixfbecker/language-server/src/StderrLogger.php on line 23

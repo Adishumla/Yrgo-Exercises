@@ -179,8 +179,7 @@ class Game
         ScheduleNextTick();
         
         _board.Draw(snake, _food);
-        Console.BackgroundColor = ConsoleColor.Black;
-        Console.ForegroundColor = ConsoleColor.White;
+        
         Console.WriteLine("Score: " + snake.Body.Count);
 
     }
@@ -304,14 +303,17 @@ class Board
                 var point = new Point(x, y);
                 if (snake.Body.Contains(point))
                 {
+                    Console.ForegroundColor = ConsoleColor.Black;
                     Console.Write("O");
                 }
                 else if (food.Position == point)
                 {
+                    Console.ForegroundColor = ConsoleColor.Black;
                     Console.Write("X");
                 }
                 else
                 {
+                    Console.BackgroundColor = ConsoleColor.White;
                     Console.Write(" ");
                 }
             }

@@ -1,4 +1,4 @@
-<div class="w-full h-screen grid grid-cols-12 grid-rows-1 bg-pink">
+<div class="w-full h-screen grid grid-cols-12 grid-rows-1 bg-blue">
     <div class="col-start-1 col-span-full row-start-1 row-span-1 aspect-square relative">
         <canvas class="mx-auto absolute object-contain max-w-[100vh] max-h-[100vh] md:max-w-[90vw] md:max-w-[90vw] lg:max-w-[70vw] lg:max-h-[70vw] h-full w-full inset-0" data-spline="https://prod.spline.design/Zfbr8lgrjsq57VFo/scene.splinecode"></canvas>
     </div>
