@@ -10,7 +10,8 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const app = express();
-const port = 3000;
+const port = 3005;
+app.use(express.json());
 
 app.use(morgan(":status :method :url - :response-time ms"));
 

@@ -5,28 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cc9602f-884d-42e9-9870-97108dd6ea93" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Yrgo-Exercises.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Node/04 - Working with a DB/env-connection.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Node/04 - Working with a DB/process.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/snake/snake/.vs/snake/xs/UserPrefs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/C#/snake/snake/.vs/snake/xs/UserPrefs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/snake/snake/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/C#/snake/snake/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/snake/snake/bin/Debug/net7.0/snake.dll" beforeDir="false" afterPath="$PROJECT_DIR$/C#/snake/snake/bin/Debug/net7.0/snake.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/snake/snake/bin/Debug/net7.0/snake.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/C#/snake/snake/bin/Debug/net7.0/snake.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/snake/snake/obj/Debug/net7.0/snake.dll" beforeDir="false" afterPath="$PROJECT_DIR$/C#/snake/snake/obj/Debug/net7.0/snake.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/snake/snake/obj/Debug/net7.0/snake.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/C#/snake/snake/obj/Debug/net7.0/snake.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Wordpress/sourscoops/app/public/wp-content/themes/sourscoops/blocks/hero/block.php" beforeDir="false" afterPath="$PROJECT_DIR$/Wordpress/sourscoops/app/public/wp-content/themes/sourscoops/blocks/hero/block.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Wordpress/sourscoops/app/sql/local.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Wordpress/sourscoops/app/sql/local.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Wordpress/sourscoops/logs/php/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/Wordpress/sourscoops/logs/php/error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Wordpress/sourscoops/logs/php/php-fpm.log" beforeDir="false" afterPath="$PROJECT_DIR$/Wordpress/sourscoops/logs/php/php-fpm.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/for-fun/db-test/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/for-fun/db-test/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/for-fun/text-highlight/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Node/04 - Working with a DB/env-connection.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Node/04 - Working with a DB/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Node/04 - Working with a DB/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Node/04 - Working with a DB/process.env" beforeDir="false" afterPath="$PROJECT_DIR$/for-fun/text-highlight/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Node/04 - Working with a DB/routes/reports.js" beforeDir="false" afterPath="$PROJECT_DIR$/Node/04 - Working with a DB/routes/reports.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -44,6 +40,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "/Users/adam/Documents/GitHub/Yrgo-Exercises",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -52,7 +49,10 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.index.html">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Yrgo-Exercises/for-fun/text-highlight/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/Node/04 - Working with a DB/package.json" />
       <command value="run" />
@@ -65,6 +65,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
@@ -78,6 +79,7 @@
       <option name="presentableId" value="Default" />
       <updated>1679936387177</updated>
       <workItem from="1679936389671" duration="3109000" />
+      <workItem from="1679990253085" duration="4379000" />
     </task>
     <servers />
   </component>
