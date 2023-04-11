@@ -1,0 +1,47 @@
+.App {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #282c34;
+  overflow: hidden;
+}
+
+.App-logo {
+  pointer-events: none;
+}
+
+.login-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.login-view .logo,
+.login-view .title {
+  margin-bottom: 36px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
+  width: 100%;
+  margin-top: 36px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 600px;
+}
+.song {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 12px 24px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+  color: #fff;
+}

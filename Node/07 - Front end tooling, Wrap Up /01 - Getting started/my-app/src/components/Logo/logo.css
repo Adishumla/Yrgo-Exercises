@@ -1,0 +1,33 @@
+.logo {
+  width: 105px;
+  height: 105px;
+  border-radius: 100%;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.185233);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.0250972);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.185233);
+  cursor: pointer;
+}
+
+.logo:active {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.playing {
+  animation: jump 1s infinite;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

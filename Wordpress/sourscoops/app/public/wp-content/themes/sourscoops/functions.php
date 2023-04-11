@@ -62,4 +62,5 @@ function print_a($data)
 add_action('init', function () {
     register_block_type(__DIR__ . '/blocks/hero');
     register_block_type(__DIR__ . '/blocks/vendors');
+    register_block_type(__DIR__ . '/blocks/test');
 });
