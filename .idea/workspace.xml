@@ -5,43 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cc9602f-884d-42e9-9870-97108dd6ea93" name="Changes" comment="svelte">
-      <change afterPath="$PROJECT_DIR$/Workshop/10 - Svelte/kanye-rest/.vscode/extensions.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Workshop/10 - Svelte/kanye-rest/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Workshop/10 - Svelte/kanye-rest/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Workshop/10 - Svelte/kanye-rest/jsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Workshop/10 - Svelte/kanye-rest/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Workshop/10 - Svelte/kanye-rest/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Workshop/10 - Svelte/kanye-rest/public/vite.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Workshop/10 - Svelte/kanye-rest/src/App.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Workshop/10 - Svelte/kanye-rest/src/app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Workshop/10 - Svelte/kanye-rest/src/assets/svelte.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Workshop/10 - Svelte/kanye-rest/src/lib/Button.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Workshop/10 - Svelte/kanye-rest/src/lib/Counter.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Workshop/10 - Svelte/kanye-rest/src/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Workshop/10 - Svelte/kanye-rest/src/vite-env.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Workshop/10 - Svelte/kanye-rest/svelte.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Workshop/10 - Svelte/kanye-rest/vite.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Workshop/10 - Svelte/webflow/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Workshop/10 - Svelte/webflow/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Workshop/10 - Svelte/webflow/jsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Workshop/10 - Svelte/webflow/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Workshop/10 - Svelte/webflow/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Workshop/10 - Svelte/webflow/postcss.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Workshop/10 - Svelte/webflow/prettier.config.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Workshop/10 - Svelte/webflow/public/vite.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Workshop/10 - Svelte/webflow/src/App.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Workshop/10 - Svelte/webflow/src/app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Workshop/10 - Svelte/webflow/src/lib/Gallary.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Workshop/10 - Svelte/webflow/src/lib/GallaryItem.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Workshop/10 - Svelte/webflow/src/lib/Image.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Workshop/10 - Svelte/webflow/src/lib/api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Workshop/10 - Svelte/webflow/src/lib/stores.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Workshop/10 - Svelte/webflow/src/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Workshop/10 - Svelte/webflow/src/vite-env.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Workshop/10 - Svelte/webflow/svelte.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Workshop/10 - Svelte/webflow/tailwind.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Workshop/10 - Svelte/webflow/vite.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Workshop/10 - Svelte/webflow/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Workshop/10 - Svelte/webflow/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +140,7 @@
       <workItem from="1681200478688" duration="167000" />
       <workItem from="1681807010129" duration="202000" />
       <workItem from="1681977523440" duration="2921000" />
-      <workItem from="1681988582024" duration="7608000" />
+      <workItem from="1681988582024" duration="7918000" />
     </task>
     <task id="LOCAL-00001" summary="lesson 5">
       <created>1679999368482</created>
@@ -212,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681998314718</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="svelte">
+      <created>1681998369298</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1681998369298</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
