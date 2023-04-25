@@ -5,8 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cc9602f-884d-42e9-9870-97108dd6ea93" name="Changes" comment="svelte">
+      <change afterPath="$PROJECT_DIR$/Next/02 - Data &amp; Dynamic routes/pokemon/.eslintrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Next/02 - Data &amp; Dynamic routes/pokemon/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Next/02 - Data &amp; Dynamic routes/pokemon/.vscode/settings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Next/02 - Data &amp; Dynamic routes/pokemon/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Next/02 - Data &amp; Dynamic routes/pokemon/next.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Next/02 - Data &amp; Dynamic routes/pokemon/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Next/02 - Data &amp; Dynamic routes/pokemon/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Next/02 - Data &amp; Dynamic routes/pokemon/postcss.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Next/02 - Data &amp; Dynamic routes/pokemon/public/next.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Next/02 - Data &amp; Dynamic routes/pokemon/public/vercel.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Next/02 - Data &amp; Dynamic routes/pokemon/src/Component/Pokemon/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Next/02 - Data &amp; Dynamic routes/pokemon/src/Component/Pokemon/pikachu.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Next/02 - Data &amp; Dynamic routes/pokemon/src/app/api/hello/route.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Next/02 - Data &amp; Dynamic routes/pokemon/src/app/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Next/02 - Data &amp; Dynamic routes/pokemon/src/app/globals.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Next/02 - Data &amp; Dynamic routes/pokemon/src/app/layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Next/02 - Data &amp; Dynamic routes/pokemon/src/app/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Next/02 - Data &amp; Dynamic routes/pokemon/tailwind.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Next/02 - Data &amp; Dynamic routes/pokemon/tsconfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Workshop/10 - Svelte/webflow/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Workshop/10 - Svelte/webflow/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Wordpress/sourscoops/logs/php/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/Wordpress/sourscoops/logs/php/error.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +75,7 @@
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "/opt/homebrew/lib/node_modules/prettier",
     "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "/Users/adam/Documents/GitHub/Yrgo-Exercises/Next/02 - Data & Dynamic routes/pokemon/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -65,11 +85,12 @@
       <recent name="$PROJECT_DIR$/Node/06 - Introducing front end tooling " />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Next/02 - Data &amp; Dynamic routes/pokemon/src/Component" />
       <recent name="$PROJECT_DIR$/Workshop/10 - Svelte/kanye-rest/src/lib" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start (1)">
+  <component name="RunManager" selected="npm.dev (1)">
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Yrgo-Exercises/for-fun/text-highlight/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -78,6 +99,16 @@
       <command value="run" />
       <scripts>
         <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="dev (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/Next/02 - Data &amp; Dynamic routes/pokemon/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -103,23 +134,13 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/Node/04 - Working with a DB/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="start" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.dev (1)" />
         <item itemvalue="npm.start (1)" />
         <item itemvalue="npm.build" />
         <item itemvalue="npm.dev" />
         <item itemvalue="JavaScript Debug.index.html" />
-        <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
   </component>
@@ -140,7 +161,8 @@
       <workItem from="1681200478688" duration="167000" />
       <workItem from="1681807010129" duration="202000" />
       <workItem from="1681977523440" duration="2921000" />
-      <workItem from="1681988582024" duration="7918000" />
+      <workItem from="1681988582024" duration="9201000" />
+      <workItem from="1682409466802" duration="1901000" />
     </task>
     <task id="LOCAL-00001" summary="lesson 5">
       <created>1679999368482</created>
@@ -184,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681998369298</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="svelte">
+      <created>1681998686483</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1681998686483</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
