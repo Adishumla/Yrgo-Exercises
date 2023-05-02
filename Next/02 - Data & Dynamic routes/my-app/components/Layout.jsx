@@ -23,10 +23,10 @@ const StyledLayout = styled.div`
 
 const Layout = ({ children, slug, title, description, image }) => {
   return (
-    <Head>
+    <>
+      <SEO title="{title}" description="{description}" image={image} />
       <StyledLayout>{children}</StyledLayout>
-      <SEO title={title} description={description} image={image} />
-    </Head>
+    </>
   );
 };
 
