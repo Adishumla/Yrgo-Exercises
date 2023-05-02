@@ -36,7 +36,11 @@ const PokemonLink = styled(Link)`
 
 export default function Home({ page, slug }) {
   return (
-    <Layout slug={slug}>
+    <Layout
+      slug={slug}
+      title="Pokemon"
+      description="Pokemon from getServerSideProps"
+    >
       <StyledContent>
         <h1>Pokemon from getServerSideProps</h1>
         <PokemonGrid>
