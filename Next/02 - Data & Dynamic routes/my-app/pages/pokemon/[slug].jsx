@@ -10,7 +10,12 @@ const StyledContent = styled.div`
 
 const Slug = ({ page, slug }) => {
   return (
-    <Layout slug={slug}>
+    <Layout
+      slug={slug}
+      title={page.name}
+      description={page.name}
+      image={page.sprites.front_default}
+    >
       <StyledContent>
         <h1>{page.name} - From getStaticProps</h1>
         <img

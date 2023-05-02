@@ -40,6 +40,7 @@ export default function Home({ page, slug }) {
       slug={slug}
       title="Pokemon"
       description="Pokemon from getServerSideProps"
+      image="../public/vercel.svg"
     >
       <StyledContent>
         <h1>Pokemon from getServerSideProps</h1>
