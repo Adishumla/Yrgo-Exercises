@@ -1,6 +1,8 @@
 //create a layout component
 
 import styled from "styled-components";
+import SEO from "./SEO";
+import Head from "next/head";
 
 const StyledLayout = styled.div`
   display: flex;
@@ -19,8 +21,13 @@ const StyledLayout = styled.div`
   box-sizing: border-box;
 `;
 
-const Layout = ({ children, slug }) => {
-  return <StyledLayout>{children}</StyledLayout>;
+const Layout = ({ children, slug, title, description, image }) => {
+  return (
+    <Head>
+      <StyledLayout>{children}</StyledLayout>
+      <SEO title={title} description={description} image={image} />
+    </Head>
+  );
 };
 
 export default Layout;
